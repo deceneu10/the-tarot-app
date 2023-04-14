@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/The1stRoom.unity
-    guid: 04d14941c462b4c468e14aecc83a6262
+    path: Assets/Scenes/TheTarrotApp_v1.10.unity
+    guid: 4dd7393e6f8f19b4489deea7e1c333f6
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2ed9bbbae5fdbfb439bfe8f6a80d7720,
       type: 2}

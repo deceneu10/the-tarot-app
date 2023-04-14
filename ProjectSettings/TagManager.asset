@@ -3,7 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Card1
+  - Card2
+  - Card3
+  - Card4
+  - Card5
+  - Card6
+  - Card7
+  - Card8
+  - Card9
+  - Card10
+  - Card11
+  - Card12
+  - Card13
+  - Card14
+  - Card15
+  - Card16
+  - Card17
+  - Card18
+  - Card19
+  - Card20
+  - Card21
+  - Card22
   layers:
   - Default
   - TransparentFX

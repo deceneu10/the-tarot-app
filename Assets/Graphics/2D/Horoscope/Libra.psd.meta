@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: a081b6292f1f54c4a906bd4e1fc7ca41
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Libra_1
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 3008
+        width: 304
+        height: 485
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6a6108dadd15d4da1cb8323d33cd2f
+      internalID: 785511768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2625
+        width: 2965
+        height: 830
+      alignment: 9
+      pivot: {x: 0.50283486, y: 0.89495337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bcac4f576f65242a64b80a261ef948
+      internalID: -1475649530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_8
+      rect:
+        serializedVersion: 2
+        x: 3164
+        y: 2317
+        width: 268
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e29ae2ff1c4dbd438dfb2110289cf3e
+      internalID: -53952826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_12
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 1963
+        width: 200
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996a712d3b999ee49a81cd9d9fc7aadb
+      internalID: 1733012626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_13
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1985
+        width: 195
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee70474b3e83724280af7d9370f9242
+      internalID: -1684073718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_14
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 199
+        width: 1161
+        height: 2276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776aac8f1fc4d7a45b94a79516e08fb1
+      internalID: 1305354554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_15
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 2068
+        width: 78
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0308d19984f78ac4987e83d9716feb20
+      internalID: -241620086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_16
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 2080
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dd458c57ba11b4a84db8f108dc31fd
+      internalID: -2117287498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_17
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 2080
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35371bc5c1910f54e9d72a16742c44db
+      internalID: 868609594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_18
+      rect:
+        serializedVersion: 2
+        x: 2779
+        y: 708
+        width: 704
+        height: 1239
+      alignment: 9
+      pivot: {x: 0.4999993, y: 0.98417085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f492df5c00eda8b489e8b6d585d74b44
+      internalID: -526701717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_20
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1729
+        width: 159
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f0cebd4643ecc439473434eae08c83
+      internalID: -778927544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_21
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1729
+        width: 145
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effa8e329c34ca84cbe599657c32a2c8
+      internalID: 116696980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_22
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1733
+        width: 142
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed45a09674df144ab2c51f3988150b1
+      internalID: -1710318637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_23
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1883
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d104bf113a8b68418a1943095afeba0
+      internalID: -435169249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_25
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1358
+        width: 275
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc62048da05655e45bdf148cd93859c5
+      internalID: 412081906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_27
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1367
+        width: 272
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048c4f497bbc0d946871187d5d19c669
+      internalID: -1536363652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_32
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 980
+        width: 258
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ca8b231028b4443b6d6bc93bff0a9c
+      internalID: 1563423087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_33
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 973
+        width: 310
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc79f4be69eadb74384d970666db4712
+      internalID: -274807384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_47
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 495
+        width: 335
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbfb4d0e067acf4e8138de5c1484012
+      internalID: 1796225177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_48
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 497
+        width: 364
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e4f61637d4e1d44acb9c724591b8ba
+      internalID: -1867763681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_54
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 105
+        width: 299
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e61327c8a709540b6023a0b4a47a92
+      internalID: 186775517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Libra_56
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 107
+        width: 300
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61251bc158c6bb4c842ac183a4df857
+      internalID: -327403135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Libra_15: -241620086
+      Libra_55: 2081229656
+      Libra_56: -327403135
+      Libra_37: 173962819
+      Libra_26: -997379327
+      Libra_45: -1159975580
+      Libra_22: -1710318637
+      Libra_47: 1796225177
+      Libra_61: 544223804
+      Libra_43: -1617401563
+      Libra_10: 676881019
+      Libra_11: 57163368
+      Libra_7: 612730179
+      Libra_9: 995575191
+      Libra_60: 331642457
+      Libra_32: 1563423087
+      Libra_52: -740196828
+      Libra_40: -2113070526
+      Libra_0: 1042025968
+      Libra_38: 1748561449
+      Libra_2: -1475649530
+      Libra_29: -402535879
+      Libra_31: -507804314
+      Libra_39: 612946818
+      Libra_48: -1867763681
+      Libra_4: -1458836446
+      Libra_3: 2101702511
+      Libra_44: 1789525632
+      Libra_54: 186775517
+      Libra_59: 355171508
+      Libra_34: -386010046
+      Libra_46: -1590526889
+      Libra_19: -948157392
+      Libra_41: -1474909733
+      Libra_8: -53952826
+      Libra_33: -274807384
+      Libra_51: 6915827
+      Libra_21: 116696980
+      Libra_63: 94870081
+      Libra_17: 868609594
+      Libra_36: -938095955
+      Libra_18: -526701717
+      Libra_57: -574083352
+      Libra_14: 1305354554
+      Libra_13: -1684073718
+      Libra_42: -928972226
+      Libra_12: 1733012626
+      Libra_23: -435169249
+      Libra_24: 1811785729
+      Libra_50: 127478581
+      Libra_5: 458013454
+      Libra_1: 785511768
+      Libra_58: 856887905
+      Libra_16: -2117287498
+      Libra_35: -1647102752
+      Libra_53: 1086659351
+      Libra_28: 1242529929
+      Libra_30: -1636604822
+      Libra_25: 412081906
+      Libra_49: -1964099297
+      Libra_20: -778927544
+      Libra_27: -1536363652
+      Libra_62: -831428707
+      Libra_6: -1105216236
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
