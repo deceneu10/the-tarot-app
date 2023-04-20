@@ -32,11 +32,30 @@
                 "UnityNotificationAndroidCustomActivityString"
             ],
             "m_Values": [
-                "False",
+                "True",
                 "False",
                 "com.unity3d.player.UnityPlayerActivity"
             ]
         },
-        "DrawableResources": []
+        "DrawableResources": [
+            {
+                "Id": "app_icon_large",
+                "Type": 1,
+                "Asset": {
+                    "fileID": 2800000,
+                    "guid": "a4719ad29242e3742b91ae5796ae7d38",
+                    "type": 3
+                }
+            },
+            {
+                "Id": "app_icon_small",
+                "Type": 0,
+                "Asset": {
+                    "fileID": 2800000,
+                    "guid": "280ec4ab76fcc7e4d9717b1dafebf47e",
+                    "type": 3
+                }
+            }
+        ]
     }
 }

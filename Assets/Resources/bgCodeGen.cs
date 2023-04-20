@@ -46,6 +46,8 @@ public partial class Localization : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private Localization() : base(MetaDefault)
 	{
 	}
@@ -113,6 +115,8 @@ public partial class Locale : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private Locale() : base(MetaDefault)
 	{
 	}
@@ -220,6 +224,8 @@ public partial class Yes_No_Master : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private Yes_No_Master() : base(MetaDefault)
 	{
 	}
@@ -335,6 +341,8 @@ public partial class YES_NO_Evaluation : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private YES_NO_Evaluation() : base(MetaDefault)
 	{
 	}
@@ -414,6 +422,8 @@ public partial class TarotDecks : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private TarotDecks() : base(MetaDefault)
 	{
 	}
@@ -494,6 +504,8 @@ public partial class TarotTypeFlows : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private TarotTypeFlows() : base(MetaDefault)
 	{
 	}
@@ -591,6 +603,8 @@ public partial class ZodiacRoster : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private ZodiacRoster() : base(MetaDefault)
 	{
 	}
@@ -692,6 +706,8 @@ public partial class ZodiacLabelsContent : BGEntity
 	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
 	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private ZodiacLabelsContent() : base(MetaDefault)
 	{
 	}
@@ -721,6 +737,226 @@ public partial class ZodiacLabelsContent : BGEntity
 	public static ZodiacLabelsContent NewEntity(Action<ZodiacLabelsContent> callback)
 	{
 		return (ZodiacLabelsContent) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((ZodiacLabelsContent)entity)));
+	}
+}
+
+public partial class ZodiacMiniRoster : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new ZodiacMiniRoster(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new ZodiacMiniRoster(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(4905563135571822906UL,15705800709155814830UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.Int32 Position
+	{
+		get => _Position[Index];
+		set => _Position[Index] = value;
+	}
+	public System.String Preposition
+	{
+		get => _Preposition[Index];
+		set => _Preposition[Index] = value;
+	}
+	public System.String Sign
+	{
+		get => _Sign[Index];
+		set => _Sign[Index] = value;
+	}
+	public System.String Lang
+	{
+		get => _Lang[Index];
+		set => _Lang[Index] = value;
+	}
+	public System.String HoroscopeTitle
+	{
+		get => _HoroscopeTitle[Index];
+		set => _HoroscopeTitle[Index] = value;
+	}
+	public System.String HoroscopeDateAid1
+	{
+		get => _HoroscopeDateAid1[Index];
+		set => _HoroscopeDateAid1[Index] = value;
+	}
+	public System.String HoroscopeDateAid2
+	{
+		get => _HoroscopeDateAid2[Index];
+		set => _HoroscopeDateAid2[Index] = value;
+	}
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5518569707483194595UL, 10983528280487294100UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_Position;
+	public static BansheeGz.BGDatabase.BGFieldInt _Position => _ufle12jhs77_Position ?? (_ufle12jhs77_Position = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5391898163278217163UL, 6899847500822994339UL), () => _ufle12jhs77_Position = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Preposition;
+	public static BansheeGz.BGDatabase.BGFieldString _Preposition => _ufle12jhs77_Preposition ?? (_ufle12jhs77_Preposition = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5059205049949793055UL, 18290127892591216801UL), () => _ufle12jhs77_Preposition = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Sign;
+	public static BansheeGz.BGDatabase.BGFieldString _Sign => _ufle12jhs77_Sign ?? (_ufle12jhs77_Sign = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4674484454286720946UL, 10975166614306492065UL), () => _ufle12jhs77_Sign = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Lang;
+	public static BansheeGz.BGDatabase.BGFieldString _Lang => _ufle12jhs77_Lang ?? (_ufle12jhs77_Lang = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5539515901917433610UL, 1625492394981580192UL), () => _ufle12jhs77_Lang = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_HoroscopeTitle;
+	public static BansheeGz.BGDatabase.BGFieldString _HoroscopeTitle => _ufle12jhs77_HoroscopeTitle ?? (_ufle12jhs77_HoroscopeTitle = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5456705895424332768UL, 11199815392539109540UL), () => _ufle12jhs77_HoroscopeTitle = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_HoroscopeDateAid1;
+	public static BansheeGz.BGDatabase.BGFieldString _HoroscopeDateAid1 => _ufle12jhs77_HoroscopeDateAid1 ?? (_ufle12jhs77_HoroscopeDateAid1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5655893170963670612UL, 6475351535921056438UL), () => _ufle12jhs77_HoroscopeDateAid1 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_HoroscopeDateAid2;
+	public static BansheeGz.BGDatabase.BGFieldString _HoroscopeDateAid2 => _ufle12jhs77_HoroscopeDateAid2 ?? (_ufle12jhs77_HoroscopeDateAid2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5224518339602993869UL, 6809370775792664739UL), () => _ufle12jhs77_HoroscopeDateAid2 = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private ZodiacMiniRoster() : base(MetaDefault)
+	{
+	}
+	private ZodiacMiniRoster(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private ZodiacMiniRoster(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private ZodiacMiniRoster(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static ZodiacMiniRoster FindEntity(Predicate<ZodiacMiniRoster> filter)
+	{
+		return (ZodiacMiniRoster) MetaDefault.FindEntity(entity => filter==null || filter((ZodiacMiniRoster) entity));
+	}
+	public static List<ZodiacMiniRoster> FindEntities(Predicate<ZodiacMiniRoster> filter, List<ZodiacMiniRoster> result=null, Comparison<ZodiacMiniRoster> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<ZodiacMiniRoster> action, Predicate<ZodiacMiniRoster> filter=null, Comparison<ZodiacMiniRoster> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((ZodiacMiniRoster) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((ZodiacMiniRoster) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((ZodiacMiniRoster)e1,(ZodiacMiniRoster)e2));
+	}
+	public static ZodiacMiniRoster GetEntity(BGId entityId) => (ZodiacMiniRoster) MetaDefault.GetEntity(entityId);
+	public static ZodiacMiniRoster GetEntity(int index) => (ZodiacMiniRoster) MetaDefault[index];
+	public static ZodiacMiniRoster GetEntity(string entityName) => (ZodiacMiniRoster) MetaDefault.GetEntity(entityName);
+	public static ZodiacMiniRoster NewEntity() => (ZodiacMiniRoster) MetaDefault.NewEntity();
+	public static ZodiacMiniRoster NewEntity(BGId entityId) => (ZodiacMiniRoster) MetaDefault.NewEntity(entityId);
+	public static ZodiacMiniRoster NewEntity(Action<ZodiacMiniRoster> callback)
+	{
+		return (ZodiacMiniRoster) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((ZodiacMiniRoster)entity)));
+	}
+}
+
+public partial class Zodiac_to_Tarot : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new Zodiac_to_Tarot(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new Zodiac_to_Tarot(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5050548447098071612UL,13799984278728603576UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String Card
+	{
+		get => _Card[Index];
+		set => _Card[Index] = value;
+	}
+	public System.Int32 CardNo
+	{
+		get => _CardNo[Index];
+		set => _CardNo[Index] = value;
+	}
+	public System.String Type
+	{
+		get => _Type[Index];
+		set => _Type[Index] = value;
+	}
+	public System.Int32 TypeIndex
+	{
+		get => _TypeIndex[Index];
+		set => _TypeIndex[Index] = value;
+	}
+	public System.Int32 InterpretationIndex
+	{
+		get => _InterpretationIndex[Index];
+		set => _InterpretationIndex[Index] = value;
+	}
+	public System.String Interpretation
+	{
+		get => _Interpretation[Index];
+		set => _Interpretation[Index] = value;
+	}
+	public System.String Lang
+	{
+		get => _Lang[Index];
+		set => _Lang[Index] = value;
+	}
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(4776075059599750358UL, 16097893061518193052UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Card;
+	public static BansheeGz.BGDatabase.BGFieldString _Card => _ufle12jhs77_Card ?? (_ufle12jhs77_Card = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5103967706586175018UL, 12003900798198213819UL), () => _ufle12jhs77_Card = null));
+	private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_CardNo;
+	public static BansheeGz.BGDatabase.BGFieldInt _CardNo => _ufle12jhs77_CardNo ?? (_ufle12jhs77_CardNo = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4889058033788007845UL, 11098988589778624439UL), () => _ufle12jhs77_CardNo = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Type;
+	public static BansheeGz.BGDatabase.BGFieldString _Type => _ufle12jhs77_Type ?? (_ufle12jhs77_Type = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5583593813117741552UL, 316550625641036961UL), () => _ufle12jhs77_Type = null));
+	private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_TypeIndex;
+	public static BansheeGz.BGDatabase.BGFieldInt _TypeIndex => _ufle12jhs77_TypeIndex ?? (_ufle12jhs77_TypeIndex = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5505167508447274818UL, 2132737068430992021UL), () => _ufle12jhs77_TypeIndex = null));
+	private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_InterpretationIndex;
+	public static BansheeGz.BGDatabase.BGFieldInt _InterpretationIndex => _ufle12jhs77_InterpretationIndex ?? (_ufle12jhs77_InterpretationIndex = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5075221628088143259UL, 12170362952696092089UL), () => _ufle12jhs77_InterpretationIndex = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Interpretation;
+	public static BansheeGz.BGDatabase.BGFieldString _Interpretation => _ufle12jhs77_Interpretation ?? (_ufle12jhs77_Interpretation = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4993777908494917231UL, 6022249372061769350UL), () => _ufle12jhs77_Interpretation = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Lang;
+	public static BansheeGz.BGDatabase.BGFieldString _Lang => _ufle12jhs77_Lang ?? (_ufle12jhs77_Lang = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4681840741758329119UL, 12131747878598550197UL), () => _ufle12jhs77_Lang = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private Zodiac_to_Tarot() : base(MetaDefault)
+	{
+	}
+	private Zodiac_to_Tarot(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private Zodiac_to_Tarot(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private Zodiac_to_Tarot(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static Zodiac_to_Tarot FindEntity(Predicate<Zodiac_to_Tarot> filter)
+	{
+		return (Zodiac_to_Tarot) MetaDefault.FindEntity(entity => filter==null || filter((Zodiac_to_Tarot) entity));
+	}
+	public static List<Zodiac_to_Tarot> FindEntities(Predicate<Zodiac_to_Tarot> filter, List<Zodiac_to_Tarot> result=null, Comparison<Zodiac_to_Tarot> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<Zodiac_to_Tarot> action, Predicate<Zodiac_to_Tarot> filter=null, Comparison<Zodiac_to_Tarot> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((Zodiac_to_Tarot) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((Zodiac_to_Tarot) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((Zodiac_to_Tarot)e1,(Zodiac_to_Tarot)e2));
+	}
+	public static Zodiac_to_Tarot GetEntity(BGId entityId) => (Zodiac_to_Tarot) MetaDefault.GetEntity(entityId);
+	public static Zodiac_to_Tarot GetEntity(int index) => (Zodiac_to_Tarot) MetaDefault[index];
+	public static Zodiac_to_Tarot GetEntity(string entityName) => (Zodiac_to_Tarot) MetaDefault.GetEntity(entityName);
+	public static Zodiac_to_Tarot NewEntity() => (Zodiac_to_Tarot) MetaDefault.NewEntity();
+	public static Zodiac_to_Tarot NewEntity(BGId entityId) => (Zodiac_to_Tarot) MetaDefault.NewEntity(entityId);
+	public static Zodiac_to_Tarot NewEntity(Action<Zodiac_to_Tarot> callback)
+	{
+		return (Zodiac_to_Tarot) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((Zodiac_to_Tarot)entity)));
 	}
 }
 #pragma warning restore 414
