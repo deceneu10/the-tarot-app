@@ -21,19 +21,35 @@ public class Navigation_Controller : MonoBehaviour
     public TarotReading_YesNo tarotController;
     public CardController cardController;
 
+    [Header("Elements")]
+    public GameObject SettingsPanel;
+    public GameObject SettingsPanel_main;
+    public GameObject SettingsPanel_credits;
+
+    private Animator settingsPanelAnimator;
+
+    [Header("Flag - Reset instructions with 0")]
+    public bool resetYesNoInstructions = false;
+
     private Vector3 cameraZeroAngle;
     private Vector3 cameraTarotReadingAngle;
 
 
     void Start()
     {
-        
-
-
         Camera.transform.eulerAngles = new Vector3(0f, 0f, 0f);
         cameraTarotReadingAngle = new Vector3(70f, 0f, 0f);
 
-     // PlayerPrefs.SetInt("Yes No How to Panel", 0); //Reset flag for showing the dialog box on how it works
+
+        if(resetYesNoInstructions == true)
+        {
+
+            PlayerPrefs.SetInt("Yes No How to Panel", 0); //Reset flag for showing the dialog box on how it works
+            resetYesNoInstructions = false;
+
+        }
+
+        settingsPanelAnimator = SettingsPanel.GetComponent<Animator>();
 
     }
 
@@ -147,9 +163,53 @@ public class Navigation_Controller : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         fadeFct.FadeInStartMenu(1.5f);
+        tarotController.newReading();
     }
 
     //----------- END OF YES-NO TAROT ----------------
+
+
+    //----------- Settings Panel ----------------
+
+    public void SettingsPanel_SHOW()
+    {
+
+        settingsPanelAnimator.SetInteger("settingsState", 1);
+        SettingsPanel_main.SetActive(true);
+        SettingsPanel_credits.SetActive(false);
+
+    }
+
+    public void SettingsPanel_HIDE()
+    {
+
+        settingsPanelAnimator.SetInteger("settingsState", 2);
+
+    }
+
+    public void SettingsPanel_goto_Credits()
+    {
+
+        SettingsPanel_main.SetActive(false);
+        SettingsPanel_credits.SetActive(true);
+
+    }
+
+    public void SettingsPanel_backfrom_Credits()
+    {
+
+        SettingsPanel_main.SetActive(true);
+        SettingsPanel_credits.SetActive(false);
+
+    }
+
+    public void SettingsPanel_RateApp()
+    {
+
+        Application.OpenURL("market://details?id=com.ZalmoxeLand.TheTarotApp");
+
+    }
+
 
 
 }

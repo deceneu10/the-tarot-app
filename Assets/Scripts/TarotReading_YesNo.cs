@@ -387,6 +387,7 @@ public class TarotReading_YesNo : MonoBehaviour
     public void Reveal()
     {
         drawCard1();
+        buttonBackToMainMenu.SetActive(true); //look into this flow!!!!
     }
 
 
@@ -397,6 +398,18 @@ public class TarotReading_YesNo : MonoBehaviour
 
     private IEnumerator newReading_delay()
     {
+
+        if(card1_determined == null)
+        {
+
+
+
+        } else
+        {
+
+        
+
+
         if (isReversed1 == "Yes")
         {
             card1_determined.transform.DORotate(cardFlipBackRotationReversed, 1f, RotateMode.Fast);
@@ -449,8 +462,8 @@ public class TarotReading_YesNo : MonoBehaviour
         answerPanel.SetActive(false);
         buttonReveal.SetActive(false);
         buttonNewReading.SetActive(false);
-
-
-
     }
+
+
+}
 }
