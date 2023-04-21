@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0199c11aa6f514784c5c69cd8378d8, type: 3}
+  m_Name: PlayFabEditorPrefsSO
+  m_EditorClassIdentifier: 
+  DevAccountEmail: cerchia.angel.ionut@gmail.com
+  DevAccountToken: r19x5j1jigygxk4hazkwb7eaapqf66y9hzd6hju7oohye7dbbmdfg1ahd8nxtk91dyhsjnsowf4imq5etwykwxcp6nkxdwdqyymx81bca8xg4ek6hj5184huxo65znqiyoj54181spr15j9uwp3xmmhh7igsbe1i5af8i7ozxis7wz5woqkzg79smj7mqn195gx34nh9
+  AadAuthorization: 
+  SelectedStudio: Zalmoxe Land
+  SdkPath: Assets/PlayFabSDK
+  EdExPath: 
+  LocalCloudScriptPath: 
+  PanelIsShown: 0
+  curMainMenuIdx: 0
+  curSubMenuIdx: 0
