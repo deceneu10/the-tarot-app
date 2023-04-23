@@ -3896,7 +3896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 325174098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1183620398}
+        m_TargetAssemblyTypeName: Ads_Manager, Assembly-CSharp
+        m_MethodName: ShowInterstitialAd1_A
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &325174098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16121,6 +16133,7 @@ GameObject:
   - component: {fileID: 1183620395}
   - component: {fileID: 1183620396}
   - component: {fileID: 1183620397}
+  - component: {fileID: 1183620398}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -16418,6 +16431,24 @@ MonoBehaviour:
   ScriptDescription: Controls the App Version check
   AppVersion_Panel: {fileID: 92344254}
   settingAppVersionLabel: {fileID: 66257364}
+--- !u!114 &1183620398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183620384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef0af338b9e3a1479b41588b471e7cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptDescription: Controls Ads within the app
+  test_interstitialAd1_android: ca-app-pub-3940256099942544/1033173712
+  test_interstitialAd1_ios: ca-app-pub-3940256099942544/4411468910
+  production_interstitialAd1_android: ca-app-pub-9481538284037088/7379903120
+  production_interstitialAd1_ios: 
+  useTestIds: 1
 --- !u!1001 &1184712833
 PrefabInstance:
   m_ObjectHideFlags: 0
