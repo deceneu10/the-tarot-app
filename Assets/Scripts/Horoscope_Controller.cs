@@ -57,9 +57,14 @@ public class Horoscope_Controller : MonoBehaviour
     public ScrollRect Interpretation_Scroll;
     public GameObject VFX_HTD;
 
+    [Header("Horoscope Sounds")]
+    public AudioSource audio1;
+
     [Header("Animator Controllers")]
     public AnimatorOverrideController cardFadeIn;
 
+    [Header("Reset Sign")]
+    public bool ResetSign = false;
 
     [Header("DO NOT CHANGE!!!")]
     public bool SignSet;
@@ -92,8 +97,14 @@ public class Horoscope_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.SetInt("SignSet", 0);
-        //PlayerPrefs.SetInt("SignPos", 0);
+        if(ResetSign == true)
+        {
+            PlayerPrefs.SetInt("SignSet", 0);
+            PlayerPrefs.SetInt("SignPos", 0);
+        }
+
+
+
 
         CardPosition_initial = new Vector3(0f, 2f, -6.6f);
         CardPosition_last = new Vector3(-2.4f, 6.8f, -1.65f);
@@ -205,25 +216,43 @@ public class Horoscope_Controller : MonoBehaviour
 
     public void HoroscopeBack_from_ZodiacSign()
     {
-        Panel_HA.SetActive(true);
-        Panel_HDP.SetActive(false);
-        Panel_HSP.SetActive(false);
+
+        if(SignSet == false)
+        {
+            Panel_HA.SetActive(true);
+            Panel_HDP.SetActive(false);
+            Panel_HSP.SetActive(false);
 
 
-        //Zodiac Determine Elements
-        Title_HDP_GameObject.SetActive(true);
-        Content_HDP_GameObject.SetActive(false);
-        Sign_HDP_GameObject.SetActive(false);
-        Image_Sign_HDP_GameObject.SetActive(false);
-        Button_ChangeDate_HDP.SetActive(false);
-        Button_Next_HDP.SetActive(false);
+            //Zodiac Determine Elements
+            Title_HDP_GameObject.SetActive(true);
+            Content_HDP_GameObject.SetActive(false);
+            Sign_HDP_GameObject.SetActive(false);
+            Image_Sign_HDP_GameObject.SetActive(false);
+            Button_ChangeDate_HDP.SetActive(false);
+            Button_Next_HDP.SetActive(false);
 
-        //Zodial Pick Elements
-        Panel_SignPicker.SetActive(true);
-        Image_Sign_HSP_GameObject.SetActive(false);
-        Sign_HSP_GameObject.SetActive(false);
-        Button_Next_HSP.SetActive(false);
-        Button_ChangeSign_HSP.SetActive(false);
+            //Zodial Pick Elements
+            Panel_SignPicker.SetActive(true);
+            Image_Sign_HSP_GameObject.SetActive(false);
+            Sign_HSP_GameObject.SetActive(false);
+            Button_Next_HSP.SetActive(false);
+            Button_ChangeSign_HSP.SetActive(false);
+        }
+        else
+        {
+            //Reset existing GameObjects
+            Panel_SignPicker.SetActive(true);
+            Image_Sign_HSP_GameObject.SetActive(false);
+            Sign_HSP_GameObject.SetActive(false);
+            Button_Next_HSP.SetActive(false);
+            Button_ChangeSign_HSP.SetActive(false);
+
+            Panel_HSP.SetActive(false);
+
+            StartCoroutine(DailyTarot());
+        }
+
 
     }
 
@@ -416,7 +445,7 @@ public class Horoscope_Controller : MonoBehaviour
     {
         checkDailyHoroscope();
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
 
         ZodiacRoster ZODIAC = ZodiacRoster.FindEntity(entity => entity.Position == SignPos);
 
@@ -442,8 +471,9 @@ public class Horoscope_Controller : MonoBehaviour
         else
         {
             VFX_HTD.SetActive(true);
+            audio1.Play();
             yield return new WaitForSeconds(0.5f);
-            int randomCard = Random.Range(1, 12);
+            int randomCard = Random.Range(1, 23);
 
             TarotDecks pickedCard = TarotDecks.FindEntity(entity => entity.No == randomCard);
 

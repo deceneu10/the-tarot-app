@@ -93,6 +93,14 @@ public class AppVersion : MonoBehaviour
     {
 
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
+#if UNITY_ANDROID
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
+#elif UNITY_IPHONE
+        Application.OpenURL();
+#else
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
+#endif
+
 
     }
 

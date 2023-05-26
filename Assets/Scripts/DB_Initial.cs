@@ -13,7 +13,7 @@ public class DB_Initial : MonoBehaviour
     private string autoPassword;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         autoUserName = "TTA_" + SystemInfo.deviceUniqueIdentifier;
         autoPassword = SystemInfo.deviceUniqueIdentifier;
@@ -31,7 +31,7 @@ public class DB_Initial : MonoBehaviour
 
     private IEnumerator AutoLogin_delay() //Make a tiny delay before attempting to autologin so that internet can be establised
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.01f);
 
         var login_attempt = UniRESTClient.Async.Login(autoUserName, autoPassword, (bool ok) =>
         {

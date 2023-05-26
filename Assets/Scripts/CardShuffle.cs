@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
+using Random = UnityEngine.Random;
 
 public class CardShuffle : MonoBehaviour
 {
@@ -10,7 +12,14 @@ public class CardShuffle : MonoBehaviour
     public CardController cardController;
     public TarotReading_YesNo tarotController;
 
+    [Header("Audio elements")]
+    public AudioSource audio_cardSlide;
+    public AudioSource audio_tarotShuffle;
+    public AudioSource audio_tarotShuffleShort1;
+    public AudioSource audio_tarotShuffleShort2;
+    public AudioSource audio_tarotSpread;
 
+    [Header("Deck of Cards")]
     public GameObject card1;
     public GameObject card2;
     public GameObject card3;
@@ -585,15 +594,18 @@ public class CardShuffle : MonoBehaviour
 
     private IEnumerator shortSuffle_timing()
     {
+        audio_cardSlide.Play();
         stackCards();
         yield return new WaitForSecondsRealtime(0.65f);
         splitCards(); //
         yield return new WaitForSecondsRealtime(1f);
+        soundRandomCardShuffle();
         suffle1();
         yield return new WaitForSecondsRealtime(1.5f);
         spreadStartPosition();
         yield return new WaitForSecondsRealtime(1.25f);
         StartCoroutine(spreadCardsB());
+        audio_tarotSpread.Play();
         yield return new WaitForSecondsRealtime(1.75f);
 
         cardController.positionDeterminer = 1;
@@ -793,6 +805,23 @@ public class CardShuffle : MonoBehaviour
         card22.transform.DOMove(card22_initialPosition, 0.1f).SetEase(Ease.InOutSine);
         card22.transform.DORotate(card22_initialRotation, 0.1f, RotateMode.Fast);
         yield return new WaitForSeconds(0.05f);
+
+    }
+
+
+    void soundRandomCardShuffle()
+    {
+        int randomSound = Random.Range(1, 3);
+
+        if (randomSound == 1)
+        {
+            audio_tarotShuffleShort1.Play();
+        }
+        else if (randomSound == 2)
+        {
+            audio_tarotShuffleShort2.Play();
+        }
+
 
     }
 

@@ -16,6 +16,9 @@ public class CardController : MonoBehaviour
     public CameraPhysics CP;
     public TarotReading_YesNo tarotController;
 
+    [Header("Audio elements")]
+    public AudioSource audio_cardSlide;
+
 
     [Header("Parameters")]
     public float drawSpeed = 2f;
@@ -197,7 +200,10 @@ public class CardController : MonoBehaviour
 
             positionDeterminer = 0;
             StartCoroutine(NewRandoms());
+
         }
+
+        audio_cardSlide.Play();
 
     }
 

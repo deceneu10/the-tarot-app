@@ -437,23 +437,23 @@ public class Notification_Manager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         NotificationAnalytics();
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         checkNotificationsSchedule_DTH_DB();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         checkNotificationsSchedule_General1_DB();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         checkNotificationsSchedule_General2_DB();
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         getNotificationsContent_DTH_DB();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         getNotificationsContent_General1_DB();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         getNotificationsContent_General2_DB();
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         //DTH
         if(dth24_setFlag == false && dth24_contentFlag == true)
