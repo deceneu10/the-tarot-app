@@ -26,6 +26,28 @@ TagManager:
   - Card20
   - Card21
   - Card22
+  - MM_YesNoTarot
+  - MM_HoroscopTarot
+  - MM_Settings
+  - MM_Exit
+  - YNT_Shuffle
+  - YNT_OtherQuestion
+  - HT_PickSign
+  - HT_DetermineSign
+  - HT_ChangeSign
+  - Setting_Donate
+  - Aquarius
+  - Pisces
+  - Aries
+  - Taurus
+  - Gemini
+  - Cancer
+  - Leo
+  - Virgo
+  - Libra
+  - Scorpio
+  - Sagittarius
+  - Capricorn
   layers:
   - Default
   - TransparentFX

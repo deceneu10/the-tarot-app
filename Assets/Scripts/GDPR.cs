@@ -13,10 +13,19 @@ public class GDPR : MonoBehaviour
     public GameObject GDPR_Panel;
     public string GdprDocumentVersion;
 
+    [Header("Reset GDPR")]
+    public bool GdprFlagReset = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        if(GdprFlagReset == true)
+        {
+            PlayerPrefs.SetInt("GDPR", 0);
+        }
+
+
         StartCoroutine(GDPR_Flow());
     }
 
@@ -43,15 +52,23 @@ public class GDPR : MonoBehaviour
                 }, (DB.Tta_gdpr gdpr_result, bool ok) => {
                     if (ok)
                         {
-
                             GDPR_Panel.SetActive(false);
                             Debug.Log("record found in GDPR table");
-                        }
+                            PlayerPrefs.SetInt("GDPR", 1);
+                    }
                     else
                         {
-
-                            GDPR_Panel.SetActive(true);
-                            StartCoroutine(retry_GDPR());
+                            if(PlayerPrefs.GetInt("GDPR", 0) == 0)
+                                {
+                                    GDPR_Panel.SetActive(true);
+                                    StartCoroutine(retry_GDPR());
+                                }
+                            else
+                                {
+                                    GDPR_Panel.SetActive(false);
+                                    Debug.Log("GDPR was signed and it is acknoledged locally");
+                                }
+                            
                     }
                 });
     }

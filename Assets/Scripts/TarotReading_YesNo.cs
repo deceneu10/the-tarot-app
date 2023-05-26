@@ -25,6 +25,14 @@ public class TarotReading_YesNo : MonoBehaviour
     public GameObject buttonSuffleCards;
     public GameObject buttonBackToMainMenu;
 
+    [Header("Audio elements")]
+    public AudioSource audio_idk;
+    public AudioSource audio_yes;
+    public AudioSource audio_no;
+    public AudioSource audio_cardTurn1;
+    public AudioSource audio_cardTurn2;
+    public AudioSource audio_cardTurn3;
+    public AudioSource audio_cardTurn4;
 
     public TextMeshProUGUI answerContent;
     public TextMeshProUGUI cardDrawAidContent;
@@ -111,6 +119,31 @@ public class TarotReading_YesNo : MonoBehaviour
         {
             buttonSuffleCards.SetActive(true);
         }
+    }
+
+    void soundRandomCardTurn()
+    {
+        int randomSound = Random.Range(1, 5);
+
+        if(randomSound == 1)
+        {
+            audio_cardTurn1.Play();
+        } 
+        else if(randomSound == 2)
+        {
+            audio_cardTurn2.Play();
+        }
+        else if(randomSound == 3)
+        {
+            audio_cardTurn3.Play();
+        } 
+        else if(randomSound == 4)
+        {
+            audio_cardTurn4.Play();
+
+        }
+
+
     }
 
 
@@ -302,6 +335,7 @@ public class TarotReading_YesNo : MonoBehaviour
 
         if (Total_Yes >= 0.5 && Total_Yes < 0.6 || Total_No >= 0.5 && Total_No < 0.6)
         {
+
             int i = Random.Range(1, 5);
 
             YES_NO_Evaluation YNEvaluation = YES_NO_Evaluation.FindEntity(entity => entity.Group == "IDK" && entity.GroupIndex == i);
@@ -311,6 +345,7 @@ public class TarotReading_YesNo : MonoBehaviour
         }
         else if (Total_Yes >= 0.6)
         {
+
             int i = Random.Range(1, 4);
 
             YES_NO_Evaluation YNEvaluation = YES_NO_Evaluation.FindEntity(entity => entity.Group == "Yes" && entity.Min <= Total_Yes && entity.Max > Total_Yes && entity.GroupIndex == i);
@@ -320,6 +355,7 @@ public class TarotReading_YesNo : MonoBehaviour
         }
         else if (Total_No >= 0.6)
         {
+
             int i = Random.Range(1, 4);
 
             YES_NO_Evaluation YNEvaluation = YES_NO_Evaluation.FindEntity(entity => entity.Group == "No" && entity.Min <= Total_No && entity.Max > Total_No && entity.GroupIndex == i);
@@ -348,6 +384,8 @@ public class TarotReading_YesNo : MonoBehaviour
             card1_determined.transform.DORotate(cardFlipRotationNormal, 1f, RotateMode.Fast);
         }
 
+        soundRandomCardTurn();
+
         yield return new WaitForSeconds(1f);
 
         if(isReversed2 == "Yes")
@@ -358,7 +396,9 @@ public class TarotReading_YesNo : MonoBehaviour
         {
             card2_determined.transform.DORotate(cardFlipRotationNormal, 1f, RotateMode.Fast);
         }
-        
+
+        soundRandomCardTurn();
+
 
         yield return new WaitForSeconds(1f);
 
@@ -372,6 +412,8 @@ public class TarotReading_YesNo : MonoBehaviour
             card3_determined.transform.DORotate(cardFlipRotationNormal, 1f, RotateMode.Fast);
         }
 
+        soundRandomCardTurn();
+
         //GUI
         answerPanel.SetActive(true);
 
@@ -381,6 +423,18 @@ public class TarotReading_YesNo : MonoBehaviour
 
         answerContent.text = Answer;
 
+        if (Total_Yes >= 0.5 && Total_Yes < 0.6 || Total_No >= 0.5 && Total_No < 0.6)
+        {
+            audio_idk.Play();
+        }
+        else if (Total_Yes >= 0.6)
+        {
+            audio_yes.Play();
+        }
+        else if (Total_No >= 0.6)
+        {
+            audio_no.Play();
+        }
 
     }
 

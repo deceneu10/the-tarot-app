@@ -26,6 +26,20 @@ public class Navigation_Controller : MonoBehaviour
     public GameObject SettingsPanel_main;
     public GameObject SettingsPanel_credits;
 
+    [Header("IAP Donation")]
+    public GameObject DonationMainPanel;
+    public GameObject DonationPanelInitial;
+    public GameObject DonationPanelSuccess;
+    public GameObject DonationPanelError;
+
+    [Header("Audio elements")]
+    public AudioSource audio_cardSlide;
+    public AudioSource audio_tarotShuffle;
+    public AudioSource audio_tarotShuffleShort1;
+    public AudioSource audio_tarotShuffleShort2;
+    public AudioSource audio_tarotSpread;
+
+
     private Animator settingsPanelAnimator;
 
     [Header("Flag - Reset instructions with 0")]
@@ -70,7 +84,7 @@ public class Navigation_Controller : MonoBehaviour
 
     private IEnumerator ApplicationQuit_delay()
     {
-        yield return new WaitForSeconds(0.65f);
+        yield return new WaitForSeconds(1.25f);
         Application.Quit();
     }
 
@@ -98,6 +112,13 @@ public class Navigation_Controller : MonoBehaviour
     public void navigateToYNtarot()
     {
         StartCoroutine(navigateToYNtarot_delay());
+
+        audio_cardSlide.mute = false;
+        audio_tarotShuffle.mute = false;
+        audio_tarotShuffleShort1.mute = false;
+        audio_tarotShuffleShort2.mute = false;
+        audio_tarotSpread.mute = false;
+
     }
 
     private IEnumerator navigateToYNtarot_delay()
@@ -151,6 +172,13 @@ public class Navigation_Controller : MonoBehaviour
     public void BackTo_MainMenu_YNTarot()
     {
         StartCoroutine(BackTo_MainMenu_YNTarot_delay());
+
+        audio_cardSlide.mute = true;
+        audio_tarotShuffle.mute = true;
+        audio_tarotShuffleShort1.mute = true;
+        audio_tarotShuffleShort2.mute = true;
+        audio_tarotSpread.mute = true;
+
     }
 
     private IEnumerator BackTo_MainMenu_YNTarot_delay()
@@ -206,9 +234,67 @@ public class Navigation_Controller : MonoBehaviour
     public void SettingsPanel_RateApp()
     {
 
-        Application.OpenURL("market://details?id=com.ZalmoxeLand.TheTarotApp");
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
+#if UNITY_ANDROID
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
+#elif UNITY_IPHONE
+        Application.OpenURL();
+#else
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
+#endif
 
     }
+
+    public void SettingsPanel_Credit_Naran()
+    {
+
+        Application.OpenURL("https://narangheser.eu");
+
+    }
+
+
+    //----------- IAP Donation Panel ----------------
+
+    public void Donation_OpenMainPanel()
+    {
+        DonationMainPanel.SetActive(true);
+        DonationPanelInitial.SetActive(true);
+        DonationPanelSuccess.SetActive(false);
+        DonationPanelError.SetActive(false);
+
+    }
+
+    public void Donation_Success()
+    {
+        DonationMainPanel.SetActive(true);
+        DonationPanelInitial.SetActive(true);
+        DonationPanelSuccess.SetActive(true);
+        DonationPanelError.SetActive(false);
+
+    }
+
+    public void Donation_Error()
+    {
+        DonationMainPanel.SetActive(true);
+        DonationPanelInitial.SetActive(true);
+        DonationPanelSuccess.SetActive(false);
+        DonationPanelError.SetActive(true);
+
+    }
+
+    public void Donation_back_to_Settings()
+    {
+
+        DonationMainPanel.SetActive(false);
+        DonationPanelInitial.SetActive(true);
+        DonationPanelSuccess.SetActive(false);
+        DonationPanelError.SetActive(false);
+
+    }
+
+
+
+
 
 
 

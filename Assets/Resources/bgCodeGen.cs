@@ -48,6 +48,7 @@ public partial class Localization : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private Localization() : base(MetaDefault)
 	{
 	}
@@ -117,6 +118,7 @@ public partial class Locale : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private Locale() : base(MetaDefault)
 	{
 	}
@@ -226,6 +228,7 @@ public partial class Yes_No_Master : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private Yes_No_Master() : base(MetaDefault)
 	{
 	}
@@ -343,6 +346,7 @@ public partial class YES_NO_Evaluation : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private YES_NO_Evaluation() : base(MetaDefault)
 	{
 	}
@@ -424,6 +428,7 @@ public partial class TarotDecks : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private TarotDecks() : base(MetaDefault)
 	{
 	}
@@ -506,6 +511,7 @@ public partial class TarotTypeFlows : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private TarotTypeFlows() : base(MetaDefault)
 	{
 	}
@@ -605,6 +611,7 @@ public partial class ZodiacRoster : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private ZodiacRoster() : base(MetaDefault)
 	{
 	}
@@ -708,6 +715,7 @@ public partial class ZodiacLabelsContent : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private ZodiacLabelsContent() : base(MetaDefault)
 	{
 	}
@@ -818,6 +826,7 @@ public partial class ZodiacMiniRoster : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private ZodiacMiniRoster() : base(MetaDefault)
 	{
 	}
@@ -928,6 +937,7 @@ public partial class Zodiac_to_Tarot : BGEntity
 	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
 	private Zodiac_to_Tarot() : base(MetaDefault)
 	{
 	}
@@ -957,6 +967,89 @@ public partial class Zodiac_to_Tarot : BGEntity
 	public static Zodiac_to_Tarot NewEntity(Action<Zodiac_to_Tarot> callback)
 	{
 		return (Zodiac_to_Tarot) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((Zodiac_to_Tarot)entity)));
+	}
+}
+
+public partial class AnalyticsButtons : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new AnalyticsButtons(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new AnalyticsButtons(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(4849867931121924539UL,5938256988249729188UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String buttonTag
+	{
+		get => _buttonTag[Index];
+		set => _buttonTag[Index] = value;
+	}
+	public System.Int32 clicks
+	{
+		get => _clicks[Index];
+		set => _clicks[Index] = value;
+	}
+	public System.Int32 dateInt
+	{
+		get => _dateInt[Index];
+		set => _dateInt[Index] = value;
+	}
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5330363585029206433UL, 10457162026754895276UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_buttonTag;
+	public static BansheeGz.BGDatabase.BGFieldString _buttonTag => _ufle12jhs77_buttonTag ?? (_ufle12jhs77_buttonTag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5229229303772467984UL, 446868246033110159UL), () => _ufle12jhs77_buttonTag = null));
+	private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_clicks;
+	public static BansheeGz.BGDatabase.BGFieldInt _clicks => _ufle12jhs77_clicks ?? (_ufle12jhs77_clicks = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4886820018939971130UL, 1740958838079693963UL), () => _ufle12jhs77_clicks = null));
+	private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_dateInt;
+	public static BansheeGz.BGDatabase.BGFieldInt _dateInt => _ufle12jhs77_dateInt ?? (_ufle12jhs77_dateInt = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5681286572261322474UL, 13053638240341526924UL), () => _ufle12jhs77_dateInt = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private AnalyticsButtons() : base(MetaDefault)
+	{
+	}
+	private AnalyticsButtons(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private AnalyticsButtons(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private AnalyticsButtons(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static AnalyticsButtons FindEntity(Predicate<AnalyticsButtons> filter)
+	{
+		return (AnalyticsButtons) MetaDefault.FindEntity(entity => filter==null || filter((AnalyticsButtons) entity));
+	}
+	public static List<AnalyticsButtons> FindEntities(Predicate<AnalyticsButtons> filter, List<AnalyticsButtons> result=null, Comparison<AnalyticsButtons> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<AnalyticsButtons> action, Predicate<AnalyticsButtons> filter=null, Comparison<AnalyticsButtons> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((AnalyticsButtons) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((AnalyticsButtons) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((AnalyticsButtons)e1,(AnalyticsButtons)e2));
+	}
+	public static AnalyticsButtons GetEntity(BGId entityId) => (AnalyticsButtons) MetaDefault.GetEntity(entityId);
+	public static AnalyticsButtons GetEntity(int index) => (AnalyticsButtons) MetaDefault[index];
+	public static AnalyticsButtons GetEntity(string entityName) => (AnalyticsButtons) MetaDefault.GetEntity(entityName);
+	public static AnalyticsButtons NewEntity() => (AnalyticsButtons) MetaDefault.NewEntity();
+	public static AnalyticsButtons NewEntity(BGId entityId) => (AnalyticsButtons) MetaDefault.NewEntity(entityId);
+	public static AnalyticsButtons NewEntity(Action<AnalyticsButtons> callback)
+	{
+		return (AnalyticsButtons) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((AnalyticsButtons)entity)));
 	}
 }
 #pragma warning restore 414
