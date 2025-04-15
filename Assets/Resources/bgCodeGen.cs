@@ -49,6 +49,11 @@ public partial class Localization : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private Localization() : base(MetaDefault)
 	{
 	}
@@ -119,6 +124,11 @@ public partial class Locale : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private Locale() : base(MetaDefault)
 	{
 	}
@@ -229,6 +239,11 @@ public partial class Yes_No_Master : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private Yes_No_Master() : base(MetaDefault)
 	{
 	}
@@ -347,6 +362,11 @@ public partial class YES_NO_Evaluation : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private YES_NO_Evaluation() : base(MetaDefault)
 	{
 	}
@@ -429,6 +449,11 @@ public partial class TarotDecks : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private TarotDecks() : base(MetaDefault)
 	{
 	}
@@ -512,6 +537,11 @@ public partial class TarotTypeFlows : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private TarotTypeFlows() : base(MetaDefault)
 	{
 	}
@@ -612,6 +642,11 @@ public partial class ZodiacRoster : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private ZodiacRoster() : base(MetaDefault)
 	{
 	}
@@ -716,6 +751,11 @@ public partial class ZodiacLabelsContent : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private ZodiacLabelsContent() : base(MetaDefault)
 	{
 	}
@@ -827,6 +867,11 @@ public partial class ZodiacMiniRoster : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private ZodiacMiniRoster() : base(MetaDefault)
 	{
 	}
@@ -938,6 +983,11 @@ public partial class Zodiac_to_Tarot : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private Zodiac_to_Tarot() : base(MetaDefault)
 	{
 	}
@@ -1021,6 +1071,11 @@ public partial class AnalyticsButtons : BGEntity
 	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
 	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
 	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
 	private AnalyticsButtons() : base(MetaDefault)
 	{
 	}
@@ -1050,6 +1105,527 @@ public partial class AnalyticsButtons : BGEntity
 	public static AnalyticsButtons NewEntity(Action<AnalyticsButtons> callback)
 	{
 		return (AnalyticsButtons) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((AnalyticsButtons)entity)));
+	}
+}
+
+public partial class EducationTarotCards : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new EducationTarotCards(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new EducationTarotCards(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5568848993166585632UL,914478946339424398UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String CardIndex
+	{
+		get => _CardIndex[Index];
+		set => _CardIndex[Index] = value;
+	}
+	public UnityEngine.Sprite CardImg => _CardImg[Index];
+	public UnityEngine.GameObject TarotCard => _TarotCard[Index];
+	public System.String GroupIndex
+	{
+		get => _GroupIndex[Index];
+		set => _GroupIndex[Index] = value;
+	}
+	public System.String GroupName
+	{
+		get => _GroupName[Index];
+		set => _GroupName[Index] = value;
+	}
+	public System.String Element1
+	{
+		get => _Element1[Index];
+		set => _Element1[Index] = value;
+	}
+	public System.String Element2
+	{
+		get => _Element2[Index];
+		set => _Element2[Index] = value;
+	}
+	public System.String Astro
+	{
+		get => _Astro[Index];
+		set => _Astro[Index] = value;
+	}
+	public System.String Tag1
+	{
+		get => _Tag1[Index];
+		set => _Tag1[Index] = value;
+	}
+	public System.String Tag2
+	{
+		get => _Tag2[Index];
+		set => _Tag2[Index] = value;
+	}
+	public System.String Tag3
+	{
+		get => _Tag3[Index];
+		set => _Tag3[Index] = value;
+	}
+	public System.String Tag4
+	{
+		get => _Tag4[Index];
+		set => _Tag4[Index] = value;
+	}
+	public System.String Tag5
+	{
+		get => _Tag5[Index];
+		set => _Tag5[Index] = value;
+	}
+	public System.String Feel
+	{
+		get => _Feel[Index];
+		set => _Feel[Index] = value;
+	}
+	public System.String Position
+	{
+		get => _Position[Index];
+		set => _Position[Index] = value;
+	}
+	public System.String Description
+	{
+		get => _Description[Index];
+		set => _Description[Index] = value;
+	}
+	public System.String Group1
+	{
+		get => _Group1[Index];
+		set => _Group1[Index] = value;
+	}
+	public System.String Group1Interpretation
+	{
+		get => _Group1Interpretation[Index];
+		set => _Group1Interpretation[Index] = value;
+	}
+	public System.String Group2
+	{
+		get => _Group2[Index];
+		set => _Group2[Index] = value;
+	}
+	public System.String Group2Interpretation
+	{
+		get => _Group2Interpretation[Index];
+		set => _Group2Interpretation[Index] = value;
+	}
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5363054206942037602UL, 17504905377933474228UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_CardIndex;
+	public static BansheeGz.BGDatabase.BGFieldString _CardIndex => _ufle12jhs77_CardIndex ?? (_ufle12jhs77_CardIndex = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5364775848624915988UL, 4461843678322508681UL), () => _ufle12jhs77_CardIndex = null));
+	private static BansheeGz.BGDatabase.BGFieldUnitySprite _ufle12jhs77_CardImg;
+	public static BansheeGz.BGDatabase.BGFieldUnitySprite _CardImg => _ufle12jhs77_CardImg ?? (_ufle12jhs77_CardImg = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldUnitySprite>(MetaDefault, new BGId(5099740864389393670UL, 9868163865395527865UL), () => _ufle12jhs77_CardImg = null));
+	private static BansheeGz.BGDatabase.BGFieldUnityPrefab _ufle12jhs77_TarotCard;
+	public static BansheeGz.BGDatabase.BGFieldUnityPrefab _TarotCard => _ufle12jhs77_TarotCard ?? (_ufle12jhs77_TarotCard = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldUnityPrefab>(MetaDefault, new BGId(5316170233029147989UL, 11433284089108355251UL), () => _ufle12jhs77_TarotCard = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_GroupIndex;
+	public static BansheeGz.BGDatabase.BGFieldString _GroupIndex => _ufle12jhs77_GroupIndex ?? (_ufle12jhs77_GroupIndex = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4796279316873230480UL, 14089618576400653722UL), () => _ufle12jhs77_GroupIndex = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_GroupName;
+	public static BansheeGz.BGDatabase.BGFieldString _GroupName => _ufle12jhs77_GroupName ?? (_ufle12jhs77_GroupName = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5629938075056405939UL, 2362249028336741788UL), () => _ufle12jhs77_GroupName = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Element1;
+	public static BansheeGz.BGDatabase.BGFieldString _Element1 => _ufle12jhs77_Element1 ?? (_ufle12jhs77_Element1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4711007271460422211UL, 1977946280951183287UL), () => _ufle12jhs77_Element1 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Element2;
+	public static BansheeGz.BGDatabase.BGFieldString _Element2 => _ufle12jhs77_Element2 ?? (_ufle12jhs77_Element2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5669416429362633059UL, 9196581215642500257UL), () => _ufle12jhs77_Element2 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Astro;
+	public static BansheeGz.BGDatabase.BGFieldString _Astro => _ufle12jhs77_Astro ?? (_ufle12jhs77_Astro = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5381204549444280485UL, 17134671297865113739UL), () => _ufle12jhs77_Astro = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Tag1;
+	public static BansheeGz.BGDatabase.BGFieldString _Tag1 => _ufle12jhs77_Tag1 ?? (_ufle12jhs77_Tag1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4671789587812005680UL, 1090137309563261106UL), () => _ufle12jhs77_Tag1 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Tag2;
+	public static BansheeGz.BGDatabase.BGFieldString _Tag2 => _ufle12jhs77_Tag2 ?? (_ufle12jhs77_Tag2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5409450061658790720UL, 11510866967612246926UL), () => _ufle12jhs77_Tag2 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Tag3;
+	public static BansheeGz.BGDatabase.BGFieldString _Tag3 => _ufle12jhs77_Tag3 ?? (_ufle12jhs77_Tag3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4753315151376502415UL, 4614192986756823211UL), () => _ufle12jhs77_Tag3 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Tag4;
+	public static BansheeGz.BGDatabase.BGFieldString _Tag4 => _ufle12jhs77_Tag4 ?? (_ufle12jhs77_Tag4 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5047824428185978432UL, 814686325086043296UL), () => _ufle12jhs77_Tag4 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Tag5;
+	public static BansheeGz.BGDatabase.BGFieldString _Tag5 => _ufle12jhs77_Tag5 ?? (_ufle12jhs77_Tag5 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5591392002148968041UL, 8219742620928364988UL), () => _ufle12jhs77_Tag5 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Feel;
+	public static BansheeGz.BGDatabase.BGFieldString _Feel => _ufle12jhs77_Feel ?? (_ufle12jhs77_Feel = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5550947797888823165UL, 7596664608553422519UL), () => _ufle12jhs77_Feel = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Position;
+	public static BansheeGz.BGDatabase.BGFieldString _Position => _ufle12jhs77_Position ?? (_ufle12jhs77_Position = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5188816042992675464UL, 11535969021607637379UL), () => _ufle12jhs77_Position = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Description;
+	public static BansheeGz.BGDatabase.BGFieldString _Description => _ufle12jhs77_Description ?? (_ufle12jhs77_Description = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4998687090722866893UL, 14809285102309654932UL), () => _ufle12jhs77_Description = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Group1;
+	public static BansheeGz.BGDatabase.BGFieldString _Group1 => _ufle12jhs77_Group1 ?? (_ufle12jhs77_Group1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5364995730446805767UL, 17569579767547777189UL), () => _ufle12jhs77_Group1 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Group1Interpretation;
+	public static BansheeGz.BGDatabase.BGFieldString _Group1Interpretation => _ufle12jhs77_Group1Interpretation ?? (_ufle12jhs77_Group1Interpretation = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4725858845069448534UL, 3765816531923132077UL), () => _ufle12jhs77_Group1Interpretation = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Group2;
+	public static BansheeGz.BGDatabase.BGFieldString _Group2 => _ufle12jhs77_Group2 ?? (_ufle12jhs77_Group2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4955320432687094727UL, 12174574523150953909UL), () => _ufle12jhs77_Group2 = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Group2Interpretation;
+	public static BansheeGz.BGDatabase.BGFieldString _Group2Interpretation => _ufle12jhs77_Group2Interpretation ?? (_ufle12jhs77_Group2Interpretation = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5591431893215424879UL, 6498725023551185824UL), () => _ufle12jhs77_Group2Interpretation = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
+	private EducationTarotCards() : base(MetaDefault)
+	{
+	}
+	private EducationTarotCards(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private EducationTarotCards(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private EducationTarotCards(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static EducationTarotCards FindEntity(Predicate<EducationTarotCards> filter)
+	{
+		return (EducationTarotCards) MetaDefault.FindEntity(entity => filter==null || filter((EducationTarotCards) entity));
+	}
+	public static List<EducationTarotCards> FindEntities(Predicate<EducationTarotCards> filter, List<EducationTarotCards> result=null, Comparison<EducationTarotCards> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<EducationTarotCards> action, Predicate<EducationTarotCards> filter=null, Comparison<EducationTarotCards> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((EducationTarotCards) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((EducationTarotCards) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((EducationTarotCards)e1,(EducationTarotCards)e2));
+	}
+	public static EducationTarotCards GetEntity(BGId entityId) => (EducationTarotCards) MetaDefault.GetEntity(entityId);
+	public static EducationTarotCards GetEntity(int index) => (EducationTarotCards) MetaDefault[index];
+	public static EducationTarotCards GetEntity(string entityName) => (EducationTarotCards) MetaDefault.GetEntity(entityName);
+	public static EducationTarotCards NewEntity() => (EducationTarotCards) MetaDefault.NewEntity();
+	public static EducationTarotCards NewEntity(BGId entityId) => (EducationTarotCards) MetaDefault.NewEntity(entityId);
+	public static EducationTarotCards NewEntity(Action<EducationTarotCards> callback)
+	{
+		return (EducationTarotCards) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((EducationTarotCards)entity)));
+	}
+}
+
+public partial class EDU_Feel_Colors : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new EDU_Feel_Colors(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new EDU_Feel_Colors(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5009941539382876007UL,5718926636265443738UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String Feel
+	{
+		get => _Feel[Index];
+		set => _Feel[Index] = value;
+	}
+	public UnityEngine.Color FeelColor
+	{
+		get => _FeelColor[Index];
+		set => _FeelColor[Index] = value;
+	}
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(4873569029524926088UL, 3815106296152661933UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Feel;
+	public static BansheeGz.BGDatabase.BGFieldString _Feel => _ufle12jhs77_Feel ?? (_ufle12jhs77_Feel = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5688493146841131020UL, 10830018811600173971UL), () => _ufle12jhs77_Feel = null));
+	private static BansheeGz.BGDatabase.BGFieldColor _ufle12jhs77_FeelColor;
+	public static BansheeGz.BGDatabase.BGFieldColor _FeelColor => _ufle12jhs77_FeelColor ?? (_ufle12jhs77_FeelColor = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldColor>(MetaDefault, new BGId(5451043610852276040UL, 14644339666986516628UL), () => _ufle12jhs77_FeelColor = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
+	private EDU_Feel_Colors() : base(MetaDefault)
+	{
+	}
+	private EDU_Feel_Colors(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private EDU_Feel_Colors(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private EDU_Feel_Colors(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static EDU_Feel_Colors FindEntity(Predicate<EDU_Feel_Colors> filter)
+	{
+		return (EDU_Feel_Colors) MetaDefault.FindEntity(entity => filter==null || filter((EDU_Feel_Colors) entity));
+	}
+	public static List<EDU_Feel_Colors> FindEntities(Predicate<EDU_Feel_Colors> filter, List<EDU_Feel_Colors> result=null, Comparison<EDU_Feel_Colors> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<EDU_Feel_Colors> action, Predicate<EDU_Feel_Colors> filter=null, Comparison<EDU_Feel_Colors> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((EDU_Feel_Colors) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((EDU_Feel_Colors) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((EDU_Feel_Colors)e1,(EDU_Feel_Colors)e2));
+	}
+	public static EDU_Feel_Colors GetEntity(BGId entityId) => (EDU_Feel_Colors) MetaDefault.GetEntity(entityId);
+	public static EDU_Feel_Colors GetEntity(int index) => (EDU_Feel_Colors) MetaDefault[index];
+	public static EDU_Feel_Colors GetEntity(string entityName) => (EDU_Feel_Colors) MetaDefault.GetEntity(entityName);
+	public static EDU_Feel_Colors NewEntity() => (EDU_Feel_Colors) MetaDefault.NewEntity();
+	public static EDU_Feel_Colors NewEntity(BGId entityId) => (EDU_Feel_Colors) MetaDefault.NewEntity(entityId);
+	public static EDU_Feel_Colors NewEntity(Action<EDU_Feel_Colors> callback)
+	{
+		return (EDU_Feel_Colors) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((EDU_Feel_Colors)entity)));
+	}
+}
+
+public partial class EDU_Astro_Symbols : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new EDU_Astro_Symbols(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new EDU_Astro_Symbols(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(4957134648935880762UL,14664458333692734849UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String Astro
+	{
+		get => _Astro[Index];
+		set => _Astro[Index] = value;
+	}
+	public UnityEngine.Sprite AstroImg => _AstroImg[Index];
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5651200357145873144UL, 10184629530807853953UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Astro;
+	public static BansheeGz.BGDatabase.BGFieldString _Astro => _ufle12jhs77_Astro ?? (_ufle12jhs77_Astro = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5233888847667244014UL, 17762838289176220067UL), () => _ufle12jhs77_Astro = null));
+	private static BansheeGz.BGDatabase.BGFieldUnitySprite _ufle12jhs77_AstroImg;
+	public static BansheeGz.BGDatabase.BGFieldUnitySprite _AstroImg => _ufle12jhs77_AstroImg ?? (_ufle12jhs77_AstroImg = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldUnitySprite>(MetaDefault, new BGId(5190042551971431443UL, 2256421507645039745UL), () => _ufle12jhs77_AstroImg = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
+	private EDU_Astro_Symbols() : base(MetaDefault)
+	{
+	}
+	private EDU_Astro_Symbols(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private EDU_Astro_Symbols(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private EDU_Astro_Symbols(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static EDU_Astro_Symbols FindEntity(Predicate<EDU_Astro_Symbols> filter)
+	{
+		return (EDU_Astro_Symbols) MetaDefault.FindEntity(entity => filter==null || filter((EDU_Astro_Symbols) entity));
+	}
+	public static List<EDU_Astro_Symbols> FindEntities(Predicate<EDU_Astro_Symbols> filter, List<EDU_Astro_Symbols> result=null, Comparison<EDU_Astro_Symbols> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<EDU_Astro_Symbols> action, Predicate<EDU_Astro_Symbols> filter=null, Comparison<EDU_Astro_Symbols> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((EDU_Astro_Symbols) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((EDU_Astro_Symbols) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((EDU_Astro_Symbols)e1,(EDU_Astro_Symbols)e2));
+	}
+	public static EDU_Astro_Symbols GetEntity(BGId entityId) => (EDU_Astro_Symbols) MetaDefault.GetEntity(entityId);
+	public static EDU_Astro_Symbols GetEntity(int index) => (EDU_Astro_Symbols) MetaDefault[index];
+	public static EDU_Astro_Symbols GetEntity(string entityName) => (EDU_Astro_Symbols) MetaDefault.GetEntity(entityName);
+	public static EDU_Astro_Symbols NewEntity() => (EDU_Astro_Symbols) MetaDefault.NewEntity();
+	public static EDU_Astro_Symbols NewEntity(BGId entityId) => (EDU_Astro_Symbols) MetaDefault.NewEntity(entityId);
+	public static EDU_Astro_Symbols NewEntity(Action<EDU_Astro_Symbols> callback)
+	{
+		return (EDU_Astro_Symbols) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((EDU_Astro_Symbols)entity)));
+	}
+}
+
+public partial class EDU_Elements_Symbols : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new EDU_Elements_Symbols(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new EDU_Elements_Symbols(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5699578525950265407UL,6654955714731553408UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String Element
+	{
+		get => _Element[Index];
+		set => _Element[Index] = value;
+	}
+	public UnityEngine.Sprite ElementImg => _ElementImg[Index];
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5285036992038712205UL, 12762052835904808089UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_Element;
+	public static BansheeGz.BGDatabase.BGFieldString _Element => _ufle12jhs77_Element ?? (_ufle12jhs77_Element = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5556008969569893871UL, 3904758338761408939UL), () => _ufle12jhs77_Element = null));
+	private static BansheeGz.BGDatabase.BGFieldUnitySprite _ufle12jhs77_ElementImg;
+	public static BansheeGz.BGDatabase.BGFieldUnitySprite _ElementImg => _ufle12jhs77_ElementImg ?? (_ufle12jhs77_ElementImg = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldUnitySprite>(MetaDefault, new BGId(5517280187927748049UL, 426457773748199303UL), () => _ufle12jhs77_ElementImg = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
+	private EDU_Elements_Symbols() : base(MetaDefault)
+	{
+	}
+	private EDU_Elements_Symbols(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private EDU_Elements_Symbols(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private EDU_Elements_Symbols(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static EDU_Elements_Symbols FindEntity(Predicate<EDU_Elements_Symbols> filter)
+	{
+		return (EDU_Elements_Symbols) MetaDefault.FindEntity(entity => filter==null || filter((EDU_Elements_Symbols) entity));
+	}
+	public static List<EDU_Elements_Symbols> FindEntities(Predicate<EDU_Elements_Symbols> filter, List<EDU_Elements_Symbols> result=null, Comparison<EDU_Elements_Symbols> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<EDU_Elements_Symbols> action, Predicate<EDU_Elements_Symbols> filter=null, Comparison<EDU_Elements_Symbols> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((EDU_Elements_Symbols) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((EDU_Elements_Symbols) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((EDU_Elements_Symbols)e1,(EDU_Elements_Symbols)e2));
+	}
+	public static EDU_Elements_Symbols GetEntity(BGId entityId) => (EDU_Elements_Symbols) MetaDefault.GetEntity(entityId);
+	public static EDU_Elements_Symbols GetEntity(int index) => (EDU_Elements_Symbols) MetaDefault[index];
+	public static EDU_Elements_Symbols GetEntity(string entityName) => (EDU_Elements_Symbols) MetaDefault.GetEntity(entityName);
+	public static EDU_Elements_Symbols NewEntity() => (EDU_Elements_Symbols) MetaDefault.NewEntity();
+	public static EDU_Elements_Symbols NewEntity(BGId entityId) => (EDU_Elements_Symbols) MetaDefault.NewEntity(entityId);
+	public static EDU_Elements_Symbols NewEntity(Action<EDU_Elements_Symbols> callback)
+	{
+		return (EDU_Elements_Symbols) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((EDU_Elements_Symbols)entity)));
+	}
+}
+
+public partial class EDU_TarotCardsGroup : BGEntity
+{
+
+	public class Factory : BGEntity.EntityFactory
+	{
+		public BGEntity NewEntity(BGMetaEntity meta) => new EDU_TarotCardsGroup(meta);
+		public BGEntity NewEntity(BGMetaEntity meta, BGId id) => new EDU_TarotCardsGroup(meta, id);
+	}
+	private static BansheeGz.BGDatabase.BGMetaRow _metaDefault;
+	public static BansheeGz.BGDatabase.BGMetaRow MetaDefault => _metaDefault ?? (_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5168645041879935703UL,1006579119435350156UL), () => _metaDefault = null));
+	public static BansheeGz.BGDatabase.BGRepoEvents Events => BGRepo.I.Events;
+	public static int CountEntities => MetaDefault.CountEntities;
+	public System.String name
+	{
+		get => _name[Index];
+		set => _name[Index] = value;
+	}
+	public System.String GroupIndex
+	{
+		get => _GroupIndex[Index];
+		set => _GroupIndex[Index] = value;
+	}
+	public System.String GroupName
+	{
+		get => _GroupName[Index];
+		set => _GroupName[Index] = value;
+	}
+	public UnityEngine.Sprite GroupImgActive => _GroupImgActive[Index];
+	public UnityEngine.Sprite GroupImgInactive => _GroupImgInactive[Index];
+	private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
+	public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ?? (_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5009554246365771258UL, 2256162043631975600UL), () => _ufle12jhs77_name = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_GroupIndex;
+	public static BansheeGz.BGDatabase.BGFieldString _GroupIndex => _ufle12jhs77_GroupIndex ?? (_ufle12jhs77_GroupIndex = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5590319675689652291UL, 2545808575730922642UL), () => _ufle12jhs77_GroupIndex = null));
+	private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_GroupName;
+	public static BansheeGz.BGDatabase.BGFieldString _GroupName => _ufle12jhs77_GroupName ?? (_ufle12jhs77_GroupName = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4972843091424105805UL, 15196001933430440580UL), () => _ufle12jhs77_GroupName = null));
+	private static BansheeGz.BGDatabase.BGFieldUnitySprite _ufle12jhs77_GroupImgActive;
+	public static BansheeGz.BGDatabase.BGFieldUnitySprite _GroupImgActive => _ufle12jhs77_GroupImgActive ?? (_ufle12jhs77_GroupImgActive = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldUnitySprite>(MetaDefault, new BGId(4864957342073987559UL, 9671235200402994863UL), () => _ufle12jhs77_GroupImgActive = null));
+	private static BansheeGz.BGDatabase.BGFieldUnitySprite _ufle12jhs77_GroupImgInactive;
+	public static BansheeGz.BGDatabase.BGFieldUnitySprite _GroupImgInactive => _ufle12jhs77_GroupImgInactive ?? (_ufle12jhs77_GroupImgInactive = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldUnitySprite>(MetaDefault, new BGId(5179955649159041118UL, 16797628426827807648UL), () => _ufle12jhs77_GroupImgInactive = null));
+	private static readonly Localization.Factory _factory0_PFS = new Localization.Factory();
+	private static readonly Locale.Factory _factory1_PFS = new Locale.Factory();
+	private static readonly Yes_No_Master.Factory _factory2_PFS = new Yes_No_Master.Factory();
+	private static readonly YES_NO_Evaluation.Factory _factory3_PFS = new YES_NO_Evaluation.Factory();
+	private static readonly TarotDecks.Factory _factory4_PFS = new TarotDecks.Factory();
+	private static readonly TarotTypeFlows.Factory _factory5_PFS = new TarotTypeFlows.Factory();
+	private static readonly ZodiacRoster.Factory _factory6_PFS = new ZodiacRoster.Factory();
+	private static readonly ZodiacLabelsContent.Factory _factory7_PFS = new ZodiacLabelsContent.Factory();
+	private static readonly ZodiacMiniRoster.Factory _factory8_PFS = new ZodiacMiniRoster.Factory();
+	private static readonly Zodiac_to_Tarot.Factory _factory9_PFS = new Zodiac_to_Tarot.Factory();
+	private static readonly AnalyticsButtons.Factory _factory10_PFS = new AnalyticsButtons.Factory();
+	private static readonly EducationTarotCards.Factory _factory11_PFS = new EducationTarotCards.Factory();
+	private static readonly EDU_Feel_Colors.Factory _factory12_PFS = new EDU_Feel_Colors.Factory();
+	private static readonly EDU_Astro_Symbols.Factory _factory13_PFS = new EDU_Astro_Symbols.Factory();
+	private static readonly EDU_Elements_Symbols.Factory _factory14_PFS = new EDU_Elements_Symbols.Factory();
+	private static readonly EDU_TarotCardsGroup.Factory _factory15_PFS = new EDU_TarotCardsGroup.Factory();
+	private EDU_TarotCardsGroup() : base(MetaDefault)
+	{
+	}
+	private EDU_TarotCardsGroup(BGId id) : base(MetaDefault, id)
+	{
+	}
+	private EDU_TarotCardsGroup(BGMetaEntity meta) : base(meta)
+	{
+	}
+	private EDU_TarotCardsGroup(BGMetaEntity meta, BGId id) : base(meta, id)
+	{
+	}
+	public static EDU_TarotCardsGroup FindEntity(Predicate<EDU_TarotCardsGroup> filter)
+	{
+		return (EDU_TarotCardsGroup) MetaDefault.FindEntity(entity => filter==null || filter((EDU_TarotCardsGroup) entity));
+	}
+	public static List<EDU_TarotCardsGroup> FindEntities(Predicate<EDU_TarotCardsGroup> filter, List<EDU_TarotCardsGroup> result=null, Comparison<EDU_TarotCardsGroup> sort=null) => BGCodeGenUtils.FindEntities(MetaDefault, filter, result, sort);
+	public static void ForEachEntity(Action<EDU_TarotCardsGroup> action, Predicate<EDU_TarotCardsGroup> filter=null, Comparison<EDU_TarotCardsGroup> sort=null)
+	{
+		MetaDefault.ForEachEntity(entity => action((EDU_TarotCardsGroup) entity), filter == null ? null : (Predicate<BGEntity>) (entity => filter((EDU_TarotCardsGroup) entity)), sort==null?(Comparison<BGEntity>) null:(e1,e2) => sort((EDU_TarotCardsGroup)e1,(EDU_TarotCardsGroup)e2));
+	}
+	public static EDU_TarotCardsGroup GetEntity(BGId entityId) => (EDU_TarotCardsGroup) MetaDefault.GetEntity(entityId);
+	public static EDU_TarotCardsGroup GetEntity(int index) => (EDU_TarotCardsGroup) MetaDefault[index];
+	public static EDU_TarotCardsGroup GetEntity(string entityName) => (EDU_TarotCardsGroup) MetaDefault.GetEntity(entityName);
+	public static EDU_TarotCardsGroup NewEntity() => (EDU_TarotCardsGroup) MetaDefault.NewEntity();
+	public static EDU_TarotCardsGroup NewEntity(BGId entityId) => (EDU_TarotCardsGroup) MetaDefault.NewEntity(entityId);
+	public static EDU_TarotCardsGroup NewEntity(Action<EDU_TarotCardsGroup> callback)
+	{
+		return (EDU_TarotCardsGroup) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((EDU_TarotCardsGroup)entity)));
 	}
 }
 #pragma warning restore 414

@@ -14,6 +14,9 @@ using TigerForge;
 public class Horoscope_Controller : MonoBehaviour
 {
     //MainPanels
+    [Header("Database Dependency")]
+    public DB_Initial database;
+
     [Header("Horoscope Parent Panel")]
     public GameObject MainMenu;
     public GameObject Horoscope;
@@ -63,12 +66,24 @@ public class Horoscope_Controller : MonoBehaviour
     [Header("Animator Controllers")]
     public AnimatorOverrideController cardFadeIn;
 
+    [Header("Retry strategy with exponential backoff")]
+    //Variables for Connection Timeout - retry strategy with exponential backoff
+    public float initialDelay = 1f;
+    public float maxDelay = 6f;
+    public float backoffFactor = 1.25f;
+    public int maxAttempts = 5;
+
+    private int currentReadAttempt = 0;
+    private int currentWriteAttempt = 0;
+
     [Header("Reset Sign")]
     public bool ResetSign = false;
 
     [Header("DO NOT CHANGE!!!")]
     public bool SignSet;
     public int SignPos; 
+
+
 
 
     private int DAY_birth;
@@ -92,7 +107,7 @@ public class Horoscope_Controller : MonoBehaviour
     private GameObject card_horoscope;
     private String todayDate;
     private String todayHoroscopeDate;
-    private bool todaySignSeen;
+
 
     // Start is called before the first frame update
     void Start()
@@ -125,7 +140,7 @@ public class Horoscope_Controller : MonoBehaviour
 
 
         todayDate = DateTime.Now.ToString("dd-MM-yyyy");
-        todaySignSeen = false;
+        
 
     }
 
@@ -164,7 +179,7 @@ public class Horoscope_Controller : MonoBehaviour
         else
         {
 
-            StartCoroutine(DailyTarot());
+            checkDailyHoroscope();
 
         }
 
@@ -181,16 +196,17 @@ public class Horoscope_Controller : MonoBehaviour
 
         if(card_horoscope == null)
         {
-            Debug.Log("It has not been created and no destroy");
+            Debug.Log("[HoroscopeDaily_1card](local): A card has not been created and no destroy will occur");
         } else
         {
             Destroy(card_horoscope);
-            Debug.Log("The card is destroyed");
+            Debug.Log("[HoroscopeDaily_1card](local): The card is destroyed");
         }
 
 
         Horoscope.SetActive(false);
         MainMenu.SetActive(true);
+
     }
 
 
@@ -250,7 +266,7 @@ public class Horoscope_Controller : MonoBehaviour
 
             Panel_HSP.SetActive(false);
 
-            StartCoroutine(DailyTarot());
+            checkDailyHoroscope();
         }
 
 
@@ -376,7 +392,7 @@ public class Horoscope_Controller : MonoBehaviour
         PlayerPrefs.SetInt("SignSet", 1);
         PlayerPrefs.SetInt("SignPos", SignPos);
 
-        StartCoroutine(DailyTarot());
+        checkDailyHoroscope();
     }
 
 
@@ -414,6 +430,7 @@ public class Horoscope_Controller : MonoBehaviour
         Sign_HSP_GameObject.SetActive(false);
         Button_Next_HSP.SetActive(false);
         Button_ChangeSign_HSP.SetActive(false);
+
     }
 
     public void ZodiacSignPicker_Next()
@@ -434,43 +451,258 @@ public class Horoscope_Controller : MonoBehaviour
         PlayerPrefs.SetInt("SignSet", 1);
         PlayerPrefs.SetInt("SignPos", SignPos);
 
-        StartCoroutine(DailyTarot());
+        checkDailyHoroscope();
     }
 
 
 
     //(4) ----- Horoscope Tarot Daily -----
 
-    private IEnumerator DailyTarot()
+
+    public void DailyTarot_changeSign()
     {
-        checkDailyHoroscope();
 
-        yield return new WaitForSeconds(0.5f);
+        Panel_HTD.SetActive(false);
+        VFX_HTD.SetActive(false);
+        Button_Back_HTD.SetActive(false);
+        Button_ChangeSign_HTD.SetActive(false);
+        Panel_Interpretation_HTD.SetActive(false);
 
+        if (card_horoscope == null)
+        {
+            Debug.Log("[HoroscopeDaily_1card](local): A card has not been created and no destroy will occur");
+        }
+        else
+        {
+            Destroy(card_horoscope);
+            Debug.Log("[HoroscopeDaily_1card](local): The card is destroyed");
+        }
+
+
+        Panel_HSP.SetActive(true);
+        Panel_SignPicker.SetActive(true);
+        Image_Sign_HSP_GameObject.SetActive(false);
+        Sign_HSP_GameObject.SetActive(false);
+        Button_Next_HSP.SetActive(false);
+        Button_ChangeSign_HSP.SetActive(false);
+
+    }
+
+    void checkDailyHoroscope(){
+
+        database.Check_Login_Status();
+
+
+        if (database.DB_Operational == false)
+        {
+            StartCoroutine(retry_DB_read());
+            
+        } 
+        else
+        {
+            var result = UniRESTClient.Async.ReadOne<DB.Tta_horoscopeDaily_1card>
+               (API.thetarotapp_horoscopedaily1card,
+               new DB.Tta_horoscopeDaily_1card
+               {
+                   username = database.autoUserName,
+                   unityDate = todayDate,
+                   signNo = SignPos
+
+               }, (DB.Tta_horoscopeDaily_1card result, bool ok) => {
+                   if (ok)
+                   {
+                       Debug.Log("[HoroscopeDaily_1card](local): Sign already seen");
+                       cardNo_DB = result.cardNo;
+                       int_General_index = result.intGeneral;
+                       int_Personal_index = result.intPersonal;
+                       int_Love_index = result.intLove;
+                       int_Career_index = result.intCareer;
+                       int_Financial_index = result.intFinance;
+                       int_Spiritual_index = result.intSpirit;
+
+                       StartCoroutine(DailyTarot_FromDB());
+
+                   }
+                   else
+                   {
+                       Debug.Log("[HoroscopeDaily_1card](local): New daily horoscope needed!");
+ 
+                       StartCoroutine(DailyTarot_New());
+
+                   }
+               });
+
+        }
+    }
+
+    void writeDailyHoroscope()
+    {
+        database.Check_Login_Status();
+
+
+        if (database.DB_Operational == false)
+        {
+            StartCoroutine(retry_DB_write());
+        }
+        else
+        {
+            var result = UniRESTClient.Async.Update(
+                API.thetarotapp_horoscopedaily1card,
+                new DB.Tta_horoscopeDaily_1card
+                {
+                    username = database.autoUserName,
+                    unityDate = todayDate,
+                    signNo = SignPos,
+                    cardNo = randomDrawnCard,
+                    intGeneral = int_General_index,
+                    intPersonal = int_Personal_index,
+                    intLove = int_Love_index,
+                    intCareer = int_Career_index,
+                    intFinance = int_Financial_index,
+                    intSpirit = int_Spiritual_index
+
+                },
+         (bool ok) =>
+         {
+             Debug.Log("[HoroscopeDaily_1card](DB): WRITE --> Record written for sign position " + SignPos + " and the card generated " + randomDrawnCard);
+         });
+        }
+     
+    }
+
+    IEnumerator retry_DB_read()
+    {
+        float delay = Mathf.Min(Mathf.Pow(backoffFactor, currentReadAttempt) * initialDelay, maxDelay);
+        yield return new WaitForSeconds(delay);
+
+
+        if (currentReadAttempt < maxAttempts)
+        {
+            checkDailyHoroscope();
+            Debug.LogWarning("[HoroscopeDaily_1card](DB): READ --> Attempting to READ from the database (Attempt: " + (currentReadAttempt + 1) + ")");
+        }
+        else
+        {
+            Debug.LogError("[HoroscopeDaily_1card](DB): READ --> Failed to READ from the database after " + maxAttempts + " attempts.");
+            //You are not online - retry later - logic should be here if testing sais it to be
+        }
+
+        currentReadAttempt++;
+    }
+
+    IEnumerator retry_DB_write()
+    {
+        float delay = Mathf.Min(Mathf.Pow(backoffFactor, currentWriteAttempt) * initialDelay, maxDelay);
+        yield return new WaitForSeconds(delay);
+
+
+        if (currentWriteAttempt < maxAttempts)
+        {
+            writeDailyHoroscope();
+            Debug.LogWarning("[HoroscopeDaily_1card](DB): WRITE --> Attempting to WRITE to the database (Attempt: " + (currentWriteAttempt + 1) + ")");
+        }
+        else
+        {
+            Debug.LogError("[HoroscopeDaily_1card](DB): WRITE --> Failed to WRITE to the database after " + maxAttempts + " attempts.");
+            //You are not online - retry later - logic should be here if testing sais it to be
+        }
+
+        currentWriteAttempt++;
+    }
+
+
+
+    //---------------- Redo the classes ----------------------
+
+
+
+
+
+    private IEnumerator DailyTarot_FromDB()
+    {
         ZodiacRoster ZODIAC = ZodiacRoster.FindEntity(entity => entity.Position == SignPos);
 
         Image_Sign_HTD.sprite = ZODIAC.ZRound;
 
         Panel_HTD.SetActive(true);
 
+        //Zone dedicated for stuff when from DB get
+                TarotDecks pickedCard = TarotDecks.FindEntity(entity => entity.No == cardNo_DB);
 
-        if (todaySignSeen == true)
-        {
+                card_horoscope = Instantiate(
+                        pickedCard.Deck2,
+                        CardPosition_last,
+                        Quaternion.Euler(-110f, 90f, -90f),
+                        transform);
 
-            TarotDecks pickedCard = TarotDecks.FindEntity(entity => entity.No == cardNo_DB);
+                card_horoscope.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
-            card_horoscope = Instantiate(
-                    pickedCard.Deck2,
-                    CardPosition_last,
-                    Quaternion.Euler(-110f, 90f, -90f),
-                    transform);
+        // --- END --- Zone dedicated for stuff when from DB get
 
-            card_horoscope.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
-        }
-        else
-        {
-            VFX_HTD.SetActive(true);
+        todayHoroscopeDate = DateTime.Now.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("ro"));
+
+            //interpretation formation continue
+            ZodiacMiniRoster zmr = ZodiacMiniRoster.FindEntity(entity => entity.Position == SignPos);
+            Zodiac_to_Tarot ztt_general = Zodiac_to_Tarot.FindEntity(entity => entity.CardNo == cardNo_DB && entity.TypeIndex == 1 && entity.InterpretationIndex == int_General_index);
+            Zodiac_to_Tarot ztt_personal = Zodiac_to_Tarot.FindEntity(entity => entity.CardNo == cardNo_DB && entity.TypeIndex == 2 && entity.InterpretationIndex == int_Personal_index);
+            Zodiac_to_Tarot ztt_love = Zodiac_to_Tarot.FindEntity(entity => entity.CardNo == cardNo_DB && entity.TypeIndex == 3 && entity.InterpretationIndex == int_Love_index);
+            Zodiac_to_Tarot ztt_career = Zodiac_to_Tarot.FindEntity(entity => entity.CardNo == cardNo_DB && entity.TypeIndex == 4 && entity.InterpretationIndex == int_Career_index);
+            Zodiac_to_Tarot ztt_finance = Zodiac_to_Tarot.FindEntity(entity => entity.CardNo == cardNo_DB && entity.TypeIndex == 5 && entity.InterpretationIndex == int_Financial_index);
+            Zodiac_to_Tarot ztt_spirit = Zodiac_to_Tarot.FindEntity(entity => entity.CardNo == cardNo_DB && entity.TypeIndex == 6 && entity.InterpretationIndex == int_Spiritual_index);
+
+
+            string dailyHoroscope =
+                zmr.HoroscopeTitle + "\n" +
+                zmr.HoroscopeDateAid1 + todayHoroscopeDate + zmr.HoroscopeDateAid2 + "\n" + "\n" +
+
+                ztt_general.Type + "\n" + "\n" +
+
+                zmr.Preposition + ztt_general.Interpretation + "\n" + "\n" +
+
+                ztt_personal.Type + "\n" + "\n" +
+
+                ztt_personal.Interpretation + "\n" + "\n" +
+
+                ztt_love.Type + "\n" + "\n" +
+
+                ztt_love.Interpretation + "\n" + "\n" +
+
+                ztt_career.Type + "\n" + "\n" +
+
+                ztt_career.Interpretation + "\n" + "\n" +
+
+                ztt_finance.Type + "\n" + "\n" +
+
+                ztt_finance.Interpretation + "\n" + "\n" +
+
+                ztt_spirit.Type + "\n" + "\n" +
+
+                ztt_spirit.Interpretation + "\n" + "\n";
+
+            Interpretation_HTD.text = dailyHoroscope;
+        
+
+        yield return new WaitForSeconds(1f);
+
+
+        Button_Back_HTD.SetActive(true);
+        Button_ChangeSign_HTD.SetActive(true);
+        Panel_Interpretation_HTD.SetActive(true);
+        Interpretation_Scroll.verticalNormalizedPosition = 1f;
+    }
+
+
+    private IEnumerator DailyTarot_New()
+    {
+        ZodiacRoster ZODIAC = ZodiacRoster.FindEntity(entity => entity.Position == SignPos);
+
+        Image_Sign_HTD.sprite = ZODIAC.ZRound;
+
+        Panel_HTD.SetActive(true);
+
+        //Zone dedicated for stuff when from new Horoscope is presented
+        VFX_HTD.SetActive(true);
             audio1.Play();
             yield return new WaitForSeconds(0.5f);
             int randomCard = Random.Range(1, 23);
@@ -514,8 +746,9 @@ public class Horoscope_Controller : MonoBehaviour
             card_horoscope.transform.DORotate(CardPosition_last_rotation, 1f, RotateMode.Fast);
 
 
-            writeDailyHoroscope();
-        }
+            
+        // ---- END ---- Zone dedicated for stuff when from new Horoscope is presented
+
 
         todayHoroscopeDate = DateTime.Now.ToString("dd-MMMM-yyyy", CultureInfo.CreateSpecificCulture("ro"));
 
@@ -561,8 +794,7 @@ public class Horoscope_Controller : MonoBehaviour
 
 
         yield return new WaitForSeconds(1f);
-
-
+        writeDailyHoroscope();
 
         Button_Back_HTD.SetActive(true);
         Button_ChangeSign_HTD.SetActive(true);
@@ -570,98 +802,6 @@ public class Horoscope_Controller : MonoBehaviour
         Interpretation_Scroll.verticalNormalizedPosition = 1f;
 
     }
-
-    public void DailyTarot_changeSign()
-    {
-
-        Panel_HTD.SetActive(false);
-        VFX_HTD.SetActive(false);
-        Button_Back_HTD.SetActive(false);
-        Button_ChangeSign_HTD.SetActive(false);
-        Panel_Interpretation_HTD.SetActive(false);
-
-        if (card_horoscope == null)
-        {
-            Debug.Log("It has not been created and no destroy");
-        }
-        else
-        {
-            Destroy(card_horoscope);
-            Debug.Log("The card is destroyed");
-        }
-
-
-        Panel_HSP.SetActive(true);
-        Panel_SignPicker.SetActive(true);
-        Image_Sign_HSP_GameObject.SetActive(false);
-        Sign_HSP_GameObject.SetActive(false);
-        Button_Next_HSP.SetActive(false);
-        Button_ChangeSign_HSP.SetActive(false);
-
-    }
-
-    void checkDailyHoroscope(){
-
-        var result = UniRESTClient.Async.ReadOne<DB.Tta_horoscopeDaily_1card>
-               (API.thetarotapp_horoscopedaily1card,
-               new DB.Tta_horoscopeDaily_1card
-               {
-                   username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
-                   unityDate = todayDate,
-                   signNo = SignPos
-
-               }, (DB.Tta_horoscopeDaily_1card result, bool ok) => {
-                   if (ok)
-                   {
-                       Debug.Log("Sign already seen");
-                       cardNo_DB = result.cardNo;
-                       int_General_index = result.intGeneral;
-                       int_Personal_index = result.intPersonal;
-                       int_Love_index = result.intLove;
-                       int_Career_index = result.intCareer;
-                       int_Financial_index = result.intFinance;
-                       int_Spiritual_index = result.intSpirit;
-                       todaySignSeen = true;
-
-                   }
-                   else
-                   {
-
-                       Debug.Log("New daily horoscope needed!");
-                       todaySignSeen = false;
-
-                   }
-               });
-    }
-
-    void writeDailyHoroscope()
-    {
-
-        var result = UniRESTClient.Async.Update(
-            API.thetarotapp_horoscopedaily1card,
-            new DB.Tta_horoscopeDaily_1card
-            {
-                username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
-                unityDate = todayDate,
-                signNo = SignPos,
-                cardNo = randomDrawnCard,
-                intGeneral = int_General_index,
-                intPersonal = int_Personal_index,
-                intLove = int_Love_index,
-                intCareer = int_Career_index,
-                intFinance = int_Financial_index,
-                intSpirit = int_Spiritual_index
-
-            },
-     (bool ok) =>
-     {
-         Debug.Log("Record written for sign position " + SignPos + " and the card generated " + randomDrawnCard);
-     });
-    }
-
-
-
-
 
 
 

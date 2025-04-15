@@ -48,6 +48,11 @@ TagManager:
   - Scorpio
   - Sagittarius
   - Capricorn
+  - MajorArcana
+  - Wands
+  - Cups
+  - Swords
+  - Pentacles
   layers:
   - Default
   - TransparentFX

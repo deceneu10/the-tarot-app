@@ -101,16 +101,14 @@ public class Ads_Manager : MonoBehaviour
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
             // This callback is called once the MobileAds SDK is initialized.
-            Debug.Log("Mobile Ads initialization succesful!");
+            Debug.Log("[AdMob](local): Mobile Ads initialization succesful!");
         });
-
-        StartCoroutine(Check_MasterAdsController());
 
     }
 
 
 
-    private IEnumerator Check_MasterAdsController()
+    public IEnumerator Check_MasterAdsController()
     {
 
         yield return new WaitForSeconds(3.5f);
@@ -130,13 +128,13 @@ public class Ads_Manager : MonoBehaviour
                      {
 
                          NoAds = true;
-                         Debug.Log("NO Ads Should Show!");
+                         Debug.Log("[AdMob](DB): NO Ads Should Show!");
 
                      } else
                      {
 
                          NoAds = false;
-                         Debug.Log("Ads Should Show!");
+                         Debug.Log("[AdMob](DB): Ads Should Show!");
                          LoadAds();
                      }
 
@@ -144,7 +142,7 @@ public class Ads_Manager : MonoBehaviour
                  }
                  else
                  {
-
+                     NoAds = false;
                      //need to do nothing as if the master table is not containing a record it will automatically show ads
                      LoadAds();
 
@@ -183,13 +181,11 @@ public class Ads_Manager : MonoBehaviour
               // if error is not null, the load request failed.
               if (error != null || ad == null)
                 {
-                    Debug.LogError("interstitial ad failed to load an ad " +
-                                   "with error : " + error);
+                    Debug.LogError("[AdMob](local): Interstitial ad failed to load an ad " + "with error : " + error);
                     return;
                 }
 
-                Debug.Log("Interstitial ad loaded with response : "
-                          + ad.GetResponseInfo());
+                Debug.Log("[AdMob](local): Interstitial ad loaded with response : " + ad.GetResponseInfo());
 
                 interstitialAd1 = ad;
             });
@@ -214,13 +210,11 @@ public class Ads_Manager : MonoBehaviour
                 // if error is not null, the load request failed.
                 if (error != null || ad == null)
                 {
-                    Debug.LogError("interstitial ad failed to load an ad " +
-                                   "with error : " + error);
+                    Debug.LogError("[AdMob](local): Interstitial ad failed to load an ad " + "with error : " + error);
                     return;
                 }
 
-                Debug.Log("Interstitial ad loaded with response : "
-                          + ad.GetResponseInfo());
+                Debug.Log("[AdMob](local): Interstitial ad loaded with response : " + ad.GetResponseInfo());
 
                 interstitialAd2 = ad;
             });
@@ -245,13 +239,11 @@ public class Ads_Manager : MonoBehaviour
                 // if error is not null, the load request failed.
                 if (error != null || ad == null)
                 {
-                    Debug.LogError("interstitial ad failed to load an ad " +
-                                   "with error : " + error);
+                    Debug.LogError("[AdMob](local): Interstitial ad failed to load an ad " + "with error : " + error);
                     return;
                 }
 
-                Debug.Log("Interstitial ad loaded with response : "
-                          + ad.GetResponseInfo());
+                Debug.Log("[AdMob](local): Interstitial ad loaded with response : " + ad.GetResponseInfo());
 
                 interstitialAd3 = ad;
             });
@@ -263,7 +255,7 @@ public class Ads_Manager : MonoBehaviour
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
-            Debug.Log("Interstitial Ad full screen content closed.");
+            Debug.Log("[AdMob](local): Interstitial Ad full screen content closed.");
 
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd1();
@@ -272,8 +264,7 @@ public class Ads_Manager : MonoBehaviour
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
-            Debug.LogError("Interstitial ad failed to open full screen content " +
-                           "with error : " + error);
+            Debug.LogError("[AdMob](local): Interstitial ad failed to open full screen content " + "with error : " + error);
 
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd1();
@@ -291,18 +282,18 @@ public class Ads_Manager : MonoBehaviour
             if (clickCounterA >= 2)
             {
                
-                Debug.Log("Ad should show");
+                Debug.Log("[AdMob](local): Ad1 should show");
                 //Here we need to show the Ad
 
 
                 if (interstitialAd1.IsLoaded())
                 {
-                    Debug.Log("Showing interstitial ad.");
+                    Debug.Log("[AdMob](local): Showing interstitial ad1.");
                     interstitialAd1.Show();
                 }
                 else
                 {
-                    Debug.LogError("Interstitial ad is not ready yet.");
+                    Debug.LogError("[AdMob](local): Interstitial ad1 is not ready yet.");
                 }
 
                 RegisterReloadHandler(interstitialAd1);
@@ -329,18 +320,18 @@ public class Ads_Manager : MonoBehaviour
             if (clickCounterB >= 3)
             {
 
-                Debug.Log("Ad should show");
+                Debug.Log("[AdMob](local): Ad1 should show");
                 //Here we need to show the Ad
 
 
                 if (interstitialAd1.IsLoaded())
                 {
-                    Debug.Log("Showing interstitial ad.");
+                    Debug.Log("[AdMob](local): Showing interstitial ad1.");
                     interstitialAd1.Show();
                 }
                 else
                 {
-                    Debug.LogError("Interstitial ad is not ready yet.");
+                    Debug.LogError("[AdMob](local): Interstitial ad1 is not ready yet.");
                 }
 
                 RegisterReloadHandler(interstitialAd1);
@@ -366,18 +357,18 @@ public class Ads_Manager : MonoBehaviour
             if (clickCounterB >= 3)
             {
 
-                Debug.Log("Ad should show");
+                Debug.Log("[AdMob](local): Ad2 should show");
                 //Here we need to show the Ad
 
 
                 if (interstitialAd2.IsLoaded())
                 {
-                    Debug.Log("Showing interstitial ad.");
+                    Debug.Log("[AdMob](local): Showing interstitial ad2.");
                     interstitialAd2.Show();
                 }
                 else
                 {
-                    Debug.LogError("Interstitial ad is not ready yet.");
+                    Debug.LogError("[AdMob](local): Interstitial ad2 is not ready yet.");
                 }
 
                 RegisterReloadHandler(interstitialAd2);
@@ -398,18 +389,18 @@ public class Ads_Manager : MonoBehaviour
         if (NoAds == false)
         {
 
-            Debug.Log("Ad should show");
+            Debug.Log("[AdMob](local): Ad3 should show");
             //Here we need to show the Ad
 
 
             if (interstitialAd3.IsLoaded())
             {
-                Debug.Log("Showing interstitial ad.");
+                Debug.Log("[AdMob](local): Showing interstitial ad3.");
                 interstitialAd3.Show();
             }
             else
             {
-                Debug.LogError("Interstitial ad is not ready yet.");
+                Debug.LogError("[AdMob](local): Interstitial ad3 is not ready yet.");
             }
 
             RegisterReloadHandler(interstitialAd3);
@@ -421,13 +412,6 @@ public class Ads_Manager : MonoBehaviour
         }
     }
 
-
-    private IEnumerator example_delay()
-    {
-
-        yield return new WaitForSeconds(0.5f);
-
-    }
 
 
 

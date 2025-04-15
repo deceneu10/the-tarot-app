@@ -2,15 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TigerForge;
-using Unity.Notifications.Android;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
+#if !UNITY_WEBGL
+using Unity.Notifications.Android;
+#endif
+
+
 public class Notification_Manager : MonoBehaviour
 {
+#if !UNITY_WEBGL
     [Header("Script Description")]
     public string ScriptDescription = "Controls Notifications within the app";
 
+    [Header("Database Dependency")]
+    public DB_Initial database;
 
     private string notificationTitle_dth24;
     private string notificationContent_dth24;
@@ -51,7 +59,6 @@ public class Notification_Manager : MonoBehaviour
     {
         todayDate = DateTime.Now.ToString("dd-MM-yyyy");
 
-        StartCoroutine(PushNotificationFlow());
 
     }
 
@@ -148,21 +155,21 @@ public class Notification_Manager : MonoBehaviour
                (API.thetarotapp_notificationsController,
                new DB.Tta_notifications_controller
                {
-                   username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
+                   username = database.autoUserName,
                    notification_id = "DTH24",
                    date = todayDate
 
                }, (DB.Tta_notifications_controller result_dth24, bool ok) => {
                    if (ok)
                    {
-                       Debug.Log("Notification for Daily Tarot Horoscope(24) - is already set(1)");
+                       Debug.Log("[Notifications](DB): Notification for Daily Tarot Horoscope(24) - is already set (1)");
                        dth24_setFlag = true;
 
                    }
                    else
                    {
 
-                       Debug.Log("NO-Notification for Daily Tarot Horoscope(24) - Attempting to set it");
+                       Debug.Log("[Notifications](DB): NO-Notification for Daily Tarot Horoscope(24) - Attempting to set it");
                        dth24_setFlag = false;
 
                    }
@@ -176,7 +183,7 @@ public class Notification_Manager : MonoBehaviour
        (API.thetarotapp_notificationsController,
        new DB.Tta_notifications_controller
        {
-           username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
+           username = database.autoUserName,
            notification_id = "GENERAL1",
            date = todayDate
 
@@ -204,7 +211,7 @@ public class Notification_Manager : MonoBehaviour
        (API.thetarotapp_notificationsController,
        new DB.Tta_notifications_controller
        {
-           username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
+           username = database.autoUserName,
            notification_id = "GENERAL2",
            date = todayDate
 
@@ -295,7 +302,7 @@ public class Notification_Manager : MonoBehaviour
                }, (DB.Tta_notifications_content result_dth24_content, bool ok) => {
                    if (ok)
                    {
-                       Debug.Log("Getting Notification Content ... SUCCESS --> Daily Tarot Horoscope(24) data retrieved!");
+                       Debug.Log("[Notifications](DB): Getting Notification Content ... SUCCESS --> Daily Tarot Horoscope(24) data retrieved!");
 
                        notificationTitle_dth24 = result_dth24_content.notificationTitle;
                        notificationContent_dth24 = result_dth24_content.notificationContent;
@@ -309,7 +316,7 @@ public class Notification_Manager : MonoBehaviour
                    else
                    {
 
-                       Debug.Log("ERROR(1) --> CANNOT FIND NOTIFICATION MESSAGE!!!");
+                       Debug.Log("[Notifications](DB): ERROR(1) --> CANNOT FIND NOTIFICATION MESSAGE!!!");
                        dth24_contentFlag = false;
 
                    }
@@ -407,7 +414,7 @@ public class Notification_Manager : MonoBehaviour
             API.thetarotapp_notificationsAnalytics,
             new DB.Tta_notifications_analytics
                 {
-                username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
+                username = database.autoUserName,
                 analyticsChannel = analyticsChannel,
                 date = todayDate,
                 time = DateTime.Now.ToString("HH:mm"),
@@ -420,11 +427,11 @@ public class Notification_Manager : MonoBehaviour
      {
          if (ok)
          {
-             Debug.Log("Notification Analytics Written!");
+             Debug.Log("[Notifications](DB): Notification Analytics Written!");
          }
          else
          {
-             Debug.Log("Notification AnalyticsWriting failed");
+             Debug.LogWarning("[Notifications](DB): Notification Analytics Writing failed");
          }
      }
 );
@@ -432,11 +439,11 @@ public class Notification_Manager : MonoBehaviour
 
 
     //Push Android Notification Flow
-    private IEnumerator PushNotificationFlow()
+    public IEnumerator PushNotificationFlow()
     {
         yield return new WaitForSeconds(3f);
 
-        NotificationAnalytics();
+        NotificationAnalytics();                
         yield return new WaitForSeconds(0.5f);
 
         checkNotificationsSchedule_DTH_DB();
@@ -445,7 +452,7 @@ public class Notification_Manager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         checkNotificationsSchedule_General2_DB();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
         getNotificationsContent_DTH_DB();
         yield return new WaitForSeconds(0.5f);
@@ -453,7 +460,7 @@ public class Notification_Manager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         getNotificationsContent_General2_DB();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
         //DTH
         if(dth24_setFlag == false && dth24_contentFlag == true)
@@ -465,12 +472,12 @@ public class Notification_Manager : MonoBehaviour
         else if (dth24_setFlag == true && dth24_contentFlag == true)
         {
 
-            Debug.Log("Notification for Daily Tarot Horoscope(24) - is already set(2)");
+            Debug.Log("[Notifications](DB): Notification for Daily Tarot Horoscope(24) - is already set (2)");
 
         } else
         {
 
-            Debug.Log("ERROR(2) --> CANNOT FIND NOTIFICATION MESSAGE!!!");
+            Debug.LogWarning("[Notifications](DB): ERROR(2) --> CANNOT FIND NOTIFICATION MESSAGE!!!");
 
         }
 
@@ -485,13 +492,13 @@ public class Notification_Manager : MonoBehaviour
         else if (general1_setFlag == true && general1_contentFlag == true)
         {
 
-            Debug.Log("Notification for General 1 - Already Set");
+            Debug.Log("[Notifications](DB): Notification for General 1 - Already Set");
 
         }
         else
         {
 
-            Debug.Log("ERROR(3) --> CANNOT FIND GENERAL 1 NOTIFICATION MESSAGE!!!");
+            Debug.LogWarning("[Notifications](DB): ERROR(3) --> CANNOT FIND GENERAL 1 NOTIFICATION MESSAGE!!!");
 
         }
 
@@ -506,16 +513,16 @@ public class Notification_Manager : MonoBehaviour
         else if (general2_setFlag == true && general2_contentFlag == true)
         {
 
-            Debug.Log("Notification for General 2 - Already Set");
+            Debug.Log("[Notifications](DB): Notification for General 2 - Already Set");
 
         }
         else
         {
 
-            Debug.Log("ERROR(3) --> CANNOT FIND GENERAL 2 NOTIFICATION MESSAGE!!!");
+            Debug.LogWarning("[Notifications](DB): ERROR(3) --> CANNOT FIND GENERAL 2 NOTIFICATION MESSAGE!!!");
 
         }
     }
 
-
+#endif
 }
