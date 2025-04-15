@@ -14,6 +14,8 @@ using Toggle = UnityEngine.UI.Toggle;
 public class Navigation_Controller : MonoBehaviour
 {
 
+    // Code block or method using PING
+
     [Header("Dependencies")]
     public Camera Camera;
     public Fade_Script fadeFct;
@@ -292,7 +294,18 @@ public class Navigation_Controller : MonoBehaviour
 
     }
 
+    // Social Media buttons
 
+
+    public void socialFacebook()
+    {
+        Application.OpenURL("https://www.facebook.com/aplicatiadetarot");
+    }
+
+    public void socialInstagram()
+    {
+        Application.OpenURL("https://www.instagram.com/aplicatiadetarot/");
+    }
 
 
 

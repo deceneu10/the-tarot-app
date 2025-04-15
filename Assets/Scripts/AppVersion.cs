@@ -27,35 +27,20 @@ public class AppVersion : MonoBehaviour
     void Start()
     {
 
-
         currentAppVersion = float.Parse(Application.version);
-
-
-        StartCoroutine(CheckVersion_Flow());
-
 
         settingAppVersionLabel.text = "Aplicatia de Tarot v" + Application.version + " <sprite=0> ";
 
-
     }
 
 
-    private IEnumerator CheckVersion_Flow()
-    {
-        yield return new WaitForSeconds(5f);
-
-        CheckAppVersion();
-
-    }
-
-    private void CheckAppVersion()
+    public void CheckAppVersion()
     {
         var appVer_result = UniRESTClient.Async.ReadOne<DB.Tta_appVersion>
            (API.thetarotapp_appVersion,
            new DB.Tta_appVersion
            {
 
-               
 
            }, (DB.Tta_appVersion appVer_result, bool ok) => {
                if (ok)
@@ -79,12 +64,13 @@ public class AppVersion : MonoBehaviour
         {
 
             AppVersion_Panel.SetActive(true);
-
-        } else
+            Debug.Log("[AppVersion](DB): App Version outdated! The version " + DBAppVersion + " is available!");
+        } 
+        else
         {
 
             AppVersion_Panel.SetActive(false);
-
+            Debug.Log("[AppVersion](DB): App Version is up to date!");
         }
     }
 
@@ -96,7 +82,7 @@ public class AppVersion : MonoBehaviour
 #if UNITY_ANDROID
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
 #elif UNITY_IPHONE
-        Application.OpenURL();
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
 #else
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.ZalmoxeLand.TheTarotApp");
 #endif

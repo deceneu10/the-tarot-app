@@ -12,6 +12,8 @@ public class Analytics : MonoBehaviour
     [Header("Script Description")]
     public string ScriptDescription = "All my custom Analytics are here!";
 
+    [Header("Database Dependency")]
+    public DB_Initial database;
 
     private int dateIntToday;
 
@@ -23,10 +25,6 @@ public class Analytics : MonoBehaviour
         dateIntToday = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
 
         Load();
-
-        StartCoroutine(sendAnalyticsChecker());
-
-        StartCoroutine(deviceAnalytics());
 
     }
 
@@ -87,7 +85,7 @@ public class Analytics : MonoBehaviour
 
 
     }
-    private IEnumerator sendAnalyticsChecker()
+    public IEnumerator sendAnalyticsChecker()
     {
         yield return new WaitForSeconds(2.75f);
 
@@ -106,7 +104,7 @@ public class Analytics : MonoBehaviour
                     API.thetarotapp_analyticsButtons,
                     new DB.Tta_AnalyticsButtons
                     {
-                        username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
+                        username = database.autoUserName,
                         buttonTag = firstRow.buttonTag,
                         clicks = firstRow.clicks,
                         dateInt = firstRow.dateInt
@@ -134,7 +132,7 @@ public class Analytics : MonoBehaviour
     // --------------- Device Analytics --------------- 
 
 
-    private IEnumerator deviceAnalytics()
+    public IEnumerator deviceAnalytics()
     {
         yield return new WaitForSeconds(3.75f);
 
@@ -143,7 +141,7 @@ public class Analytics : MonoBehaviour
                     new DB.Tta_AnalyticsDevice
                     {
 
-                        username = "TTA_" + SystemInfo.deviceUniqueIdentifier
+                        username = database.autoUserName
 
                     }, (DB.Tta_AnalyticsDevice analiticsCheck, bool ok) => {
                     if (ok)
@@ -166,7 +164,7 @@ public class Analytics : MonoBehaviour
             API.thetarotapp_analyticsDevice,
             new DB.Tta_AnalyticsDevice
                 {
-                    username = "TTA_" + SystemInfo.deviceUniqueIdentifier,
+                    username = database.autoUserName,
                     deviceType = SystemInfo.deviceType.ToString(),
                     deviceModel = SystemInfo.deviceModel,
                     deviceOS = SystemInfo.operatingSystem,
